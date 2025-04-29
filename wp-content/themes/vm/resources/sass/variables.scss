@@ -1,0 +1,27 @@
+//Couleurs
+$blue: #1A0051;
+$orange: #FFB240;
+$cyan: #AFEBEA;
+$white: #FFFFF0;
+
+//Espaces
+$small: 0.5rem; // 8px
+$semi-small: 0.75rem; // 12px
+$basic: 1rem; // 16px
+$medium: 1.5rem; // 24px
+$double: 2rem; // 32px
+$triple: 3rem; // 48px
+$quadruple: 4rem; // 64px
+$quintuple: 5rem; // 80px
+$huge: 8.25rem; // 132px
+
+//Media queries
+$breakpoint-small : 600px;
+$breakpoint-tablet : 800px;
+$breakpoint-medium : 1000px;
+$breakpoint-screen : 1200px;
+
+//Width content
+$small-width : calc(100% - 32px * 2);
+$large-width : calc(100% - 32px * 2);
+

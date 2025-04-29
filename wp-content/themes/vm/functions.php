@@ -59,9 +59,51 @@ register_post_type('actuality', [
 ]);
 
 
+register_sidebar([
+    'name' => 'Coordonnées',
+    'id' => 'location',
+    'description' => 'Listes des coordonnées',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+]);
 
+register_sidebar([
+    'name' => 'Nous soutenir',
+    'id' => 'donate',
+    'description' => 'Listes des moyens de soutiens',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+]);
 
+register_nav_menu('footer', 'Le menu de navigation de fin de page');
 
+function dw_get_navigation_links(string $location): array
+{
+    $locations = get_nav_menu_locations();
+
+    if (!isset($locations[$location])) {
+        return [];
+    }
+
+    $nav_id = $locations[$location];
+
+    $nav = wp_get_nav_menu_items($nav_id);
+
+    $links = [];
+
+    foreach ($nav as $post) {
+        $link = new stdClass();
+        $link->href = $post->url;
+        $link->label = $post->title;
+
+        $links[] = $link;
+    }
+    return $links;
+}
 
 
 
