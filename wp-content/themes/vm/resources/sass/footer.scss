@@ -60,6 +60,7 @@
         border: 1px solid $white;
         display: inline-block;
         text-align: center;
+        border-radius: 30% 0 30% 0;
         @media (min-width: $breakpoint-medium) {
           margin: $basic 0 0;
           padding: $semi-small;

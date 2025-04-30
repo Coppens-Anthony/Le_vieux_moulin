@@ -1,0 +1,137 @@
+.header {
+  z-index: 1000;
+  &__brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $small-width;
+    margin: $basic auto 0;
+
+    &__logo {
+      position: relative;
+      width: 30%;
+      z-index: 1002;
+
+      &__img {
+        width: 100%;
+      }
+
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    label {
+      width: 1.8rem;
+      cursor: pointer;
+      z-index: 1002;
+      margin-left: auto;
+
+      :last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 5px;
+        background-color: $white;
+        width: 100%;
+        min-height: 0.2rem;
+        border-radius: 5px;
+        text-align: center;
+        transition: 1s;
+      }
+    }
+
+    &__nav {
+      visibility: hidden;
+      position: absolute;
+      right: -100%;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      transition: 1s;
+      z-index: 1001;
+      background-color: white;
+      text-align: center;
+
+      &__list {
+        padding-top: $huge;
+
+        &__item {
+          margin: auto auto $basic;
+          width: fit-content;
+
+          &:last-child {
+            margin-bottom: 0;
+            background-color: $orange;
+            border-top-left-radius: 1.2em;
+            border-bottom-right-radius: 1.2em;
+
+            a {
+              display: block;
+              color: $blue !important;
+              //font-family: $fredoka-regular !important;
+            }
+          }
+
+          a {
+            padding: $basic $medium;
+            color: $blue;
+            font-size: $core;
+          }
+        }
+      }
+    }
+
+    input:checked ~ &__nav {
+      visibility: visible;
+      right: 0;
+      display: block;
+    }
+    input:checked ~ label span {
+      background-color: $blue;
+      transition: 1s;
+    }
+    @media (min-width: $breakpoint-medium) {
+      &__logo{
+        width: 10%;
+      }
+      input, label {
+        visibility: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+      &__nav {
+        visibility: visible;
+        background-color: transparent;
+        position: static;
+        width: 70%;
+
+        &__list {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 0;
+          &__item{
+            margin: 0;
+            &:last-child{
+              padding: $basic $medium;
+            }
+            a{
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

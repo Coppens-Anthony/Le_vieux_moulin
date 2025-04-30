@@ -13,7 +13,7 @@
             <small class="footer__upPart__brand__message">Un lieu, une mission : accueillir, accompagner,
                 transmettre</small>
             <div>
-            <a href="https://www.facebook.com/SRGVM/?locale=fr_FR" class="footer__upPart__brand__facebook radius"
+            <a href="https://www.facebook.com/SRGVM/?locale=fr_FR" class="footer__upPart__brand__facebook"
                title="Découvrez notre page Facebook">f</a>
             <!--Typo klavika basic bold pour le f Facebook-->
             </div>

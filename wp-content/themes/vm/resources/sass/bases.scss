@@ -1,5 +1,7 @@
 html {
   font-family: $nunito-regular;
+  color: $blue;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5 {
@@ -22,11 +24,24 @@ a {
   font-family: $fredoka-regular;
 }
 
-.radius {
-  border-top-left-radius: 30%;
-  border-bottom-right-radius: 30%;
+.button {
+  padding: $basic $medium;
+  background-color: $orange;
+  border-radius: 1.2em 0 1.2em 0;
+  color: $blue;
 }
 
 small {
   font-size: $small-size;
+}
+
+.current_page {
+  color: $orange !important;
+  font-family: $fredoka-semiBold;
+}
+
+@media (min-width: $breakpoint-medium) {
+  .home_page:not(.current_page) {
+    color: $white !important;
+  }
 }

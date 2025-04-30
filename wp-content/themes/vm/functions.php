@@ -80,6 +80,7 @@ register_sidebar([
 ]);
 
 register_nav_menu('footer', 'Le menu de navigation de fin de page');
+register_nav_menu('header', 'Le menu de navigation de haut de page');
 
 function dw_get_navigation_links(string $location): array
 {
