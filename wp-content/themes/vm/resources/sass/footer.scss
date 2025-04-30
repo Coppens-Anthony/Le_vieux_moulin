@@ -2,6 +2,7 @@
 
 .footer {
   background-color: $blue;
+  font-family: $fredoka-regular;
   color: $white;
 
   &__upPart {
@@ -47,16 +48,24 @@
           opacity: 0;
         }
       }
+      &__message{
+        font-size: $small-size;
+      }
 
       &__facebook {
+        font-family: $klavika-bold;
+        font-size: $core;
         margin: $semi-small 0 0;
         padding: $small;
         border: 1px solid $white;
         display: inline-block;
+        text-align: center;
         @media (min-width: $breakpoint-medium) {
           margin: $basic 0 0;
           padding: $semi-small;
-
+        }
+        @media (min-width: $breakpoint-screen) {
+          width: 12%;
         }
       }
     }
@@ -69,51 +78,52 @@
         flex-direction: row;
         justify-content: space-between;
         gap: $huge;
-
-        h4 {
-          margin-bottom: $basic;
-          @media (min-width: $breakpoint-medium) {
-            margin-bottom: $double;
-          }
-        }
-
-        li {
-          margin-bottom: $basic;
-          @media (min-width: $breakpoint-medium) {
-            margin-bottom: $medium;
-          }
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-          }
-        }
-      }
-    }
-
-    &__downPart {
-      width: $small-width;
-      margin: auto;
-      border-top: 1px solid $white;
-      padding: $double 0 $basic;
-      @media (min-width: $breakpoint-medium) {
-        width: $large-width;
-        padding: $triple 0 $double;
-        display: flex;
-        justify-content: space-between;
       }
 
-      &__text {
-        display: block;
-        margin-bottom: $semi-small;
+      h4 {
+        margin-bottom: $basic;
+        font-family: $fredoka-semiBold;
         @media (min-width: $breakpoint-medium) {
-          margin-bottom: $basic;
-
+          margin-bottom: $double;
         }
       }
-    }
 
-    a {
-      color: $white;
+      li {
+        margin-bottom: $basic;
+        @media (min-width: $breakpoint-medium) {
+          margin-bottom: $medium;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
+
+  &__downPart {
+    width: $small-width;
+    margin: auto;
+    border-top: 1px solid $white;
+    padding: $double 0 $basic;
+    @media (min-width: $breakpoint-medium) {
+      width: $large-width;
+      padding: $triple 0 $double;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      display: block;
+      margin-bottom: $semi-small;
+      @media (min-width: $breakpoint-medium) {
+        margin-bottom: $basic;
+
+      }
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}
