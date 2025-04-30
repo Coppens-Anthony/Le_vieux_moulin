@@ -202,9 +202,6 @@ input {
   color: #FFFFF0;
 }
 
-.header {
-  z-index: 1000;
-}
 .header__brand {
   display: flex;
   justify-content: space-between;
@@ -307,6 +304,7 @@ input:checked ~ .header__brand__nav {
     background-color: transparent;
     position: static;
     width: 70%;
+    height: auto;
   }
   .header__brand__nav__list {
     display: flex;
@@ -393,6 +391,7 @@ a {
   background-color: #FFB240;
   border-radius: 1.2em 0 1.2em 0;
   color: #1A0051;
+  font-size: 1.3rem;
 }
 
 small {

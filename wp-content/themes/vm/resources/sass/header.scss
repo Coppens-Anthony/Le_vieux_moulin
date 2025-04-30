@@ -1,5 +1,4 @@
 .header {
-  z-index: 1000;
   &__brand {
     display: flex;
     justify-content: space-between;
@@ -115,6 +114,7 @@
         background-color: transparent;
         position: static;
         width: 70%;
+        height: auto;
 
         &__list {
           display: flex;
