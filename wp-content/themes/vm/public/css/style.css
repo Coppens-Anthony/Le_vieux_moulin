@@ -45,8 +45,29 @@ input {
   border-radius: 0;
 }
 
+@font-face {
+  font-family: "Fredoka-Medium";
+  src: url("/wp-content/themes/vm/resources/fonts/fredoka/Fredoka-Medium.ttf");
+}
+@font-face {
+  font-family: "Fredoka-Regular";
+  src: url("/wp-content/themes/vm/resources/fonts/fredoka/Fredoka-Regular.ttf");
+}
+@font-face {
+  font-family: "Fredoka-SemiBold";
+  src: url("/wp-content/themes/vm/resources/fonts/fredoka/Fredoka-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("/wp-content/themes/vm/resources/fonts/nunito/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: "klavika-bold";
+  src: url("/wp-content/themes/vm/resources/fonts/klavika/klavika-bold.otf");
+}
 .footer {
   background-color: #1A0051;
+  font-family: "Fredoka-Regular", "Poppins", "Quicksand", "Arial Rounded MT Bold", sans-serif;
   color: #FFFFF0;
 }
 .footer__upPart {
@@ -98,16 +119,27 @@ input {
   height: 100%;
   opacity: 0;
 }
+.footer__upPart__brand__message {
+  font-size: 0.8rem;
+}
 .footer__upPart__brand__facebook {
+  font-family: "klavika-bold", "Titillium Web", "Rajdhani", "Arial Black", sans-serif;
+  font-size: 1.3rem;
   margin: 0.75rem 0 0;
   padding: 0.5rem;
   border: 1px solid #FFFFF0;
   display: inline-block;
+  text-align: center;
 }
 @media (min-width: 1000px) {
   .footer__upPart__brand__facebook {
     margin: 1rem 0 0;
     padding: 0.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__upPart__brand__facebook {
+    width: 12%;
   }
 }
 .footer__upPart__infos {
@@ -121,29 +153,26 @@ input {
     justify-content: space-between;
     gap: 8.25rem;
   }
-  .footer__upPart__infos h4 {
-    margin-bottom: 1rem;
-  }
 }
-@media (min-width: 1000px) and (min-width: 1000px) {
+.footer__upPart__infos h4 {
+  margin-bottom: 1rem;
+  font-family: "Fredoka-SemiBold", "Poppins SemiBold", "Quicksand SemiBold", "Arial Rounded MT Bold", sans-serif;
+}
+@media (min-width: 1000px) {
   .footer__upPart__infos h4 {
     margin-bottom: 2rem;
   }
 }
-@media (min-width: 1000px) {
-  .footer__upPart__infos li {
-    margin-bottom: 1rem;
-  }
+.footer__upPart__infos li {
+  margin-bottom: 1rem;
 }
-@media (min-width: 1000px) and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .footer__upPart__infos li {
     margin-bottom: 1.5rem;
   }
 }
-@media (min-width: 1000px) {
-  .footer__upPart__infos li:last-child {
-    margin-bottom: 0;
-  }
+.footer__upPart__infos li:last-child {
+  margin-bottom: 0;
 }
 .footer__downPart {
   width: calc(100% - 64px);
@@ -172,6 +201,14 @@ input {
   color: #FFFFF0;
 }
 
+html {
+  font-family: "Nunito-Regular", "Rubik", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Fredoka-Regular", "Poppins", "Quicksand", "Arial Rounded MT Bold", sans-serif;
+}
+
 .sro {
   position: absolute;
   overflow: hidden;
@@ -185,11 +222,16 @@ input {
 
 a {
   text-decoration: none;
+  font-family: "Fredoka-Regular", "Poppins", "Quicksand", "Arial Rounded MT Bold", sans-serif;
 }
 
 .radius {
   border-top-left-radius: 30%;
   border-bottom-right-radius: 30%;
+}
+
+small {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,18 +1,32 @@
-.sro{
+html {
+  font-family: $nunito-regular;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $fredoka-regular;
+}
+
+.sro {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
+  height: 1px;
+  width: 1px;
   margin: -1px;
   padding: 0;
   border: 0;
 }
 
-a{
+a {
   text-decoration: none;
+  font-family: $fredoka-regular;
 }
 
-.radius{
+.radius {
   border-top-left-radius: 30%;
   border-bottom-right-radius: 30%;
+}
+
+small {
+  font-size: $small-size;
 }
