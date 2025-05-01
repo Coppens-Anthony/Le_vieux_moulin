@@ -1,4 +1,3 @@
-
 html {
   font-family: $nunito-regular;
   color: $blue;
@@ -16,11 +15,15 @@ h1, h2, h3, h4, h5 {
       content: '';
       position: absolute;
       left: 0;
-      top: $markup;
+      top: $littleMarkup;
       width: 100%;
-      height: 100%;
+      height: 50%;
       background-image: url("/wp-content/themes/vm/resources/svg/markup.svg");
       background-size: 100% 100%;
+      @media (min-width: $breakpoint-tablet){
+        top: $markup;
+        height: 100%;
+      }
     }
   }
 

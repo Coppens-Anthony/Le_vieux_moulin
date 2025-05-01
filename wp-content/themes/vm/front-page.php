@@ -38,23 +38,45 @@ get_header();
 
             if ($houses->have_posts()): ?>
                 <ul class="houses__list">
-                <?php while ($houses->have_posts()): $houses->the_post(); ?>
-                    <li class="houses__list__item">
-                        <article class="houses__list__item__article">
-                            <h3 class="sro"><?= get_the_title(); ?></h3>
-                            <div class="houses__list__item__article__content_Container">
-                                <p class="houses__list__item__article__content_Container__text"><?= get_field('desc') ?></p>
-                                <a href="<?= get_the_permalink(); ?>" title="Vers le foyer <?= get_the_title(); ?>"
-                                   class="houses__list__item__article__content_Container__link button"><?= get_the_title(); ?></a>
-                            </div>
-                            <div class="houses__list__item__article__image">
-                                <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
-                            </div>
-                        </article>
-                    </li>
+                    <?php while ($houses->have_posts()): $houses->the_post(); ?>
+                        <li class="houses__list__item">
+                            <article class="houses__list__item__article">
+                                <h3 class="sro"><?= get_the_title(); ?></h3>
+                                <div class="houses__list__item__article__content_Container">
+                                    <p class="houses__list__item__article__content_Container__text"><?= get_field('desc') ?></p>
+                                    <a href="<?= get_the_permalink(); ?>" title="Vers le foyer <?= get_the_title(); ?>"
+                                       class="houses__list__item__article__content_Container__link button"><?= get_the_title(); ?></a>
+                                </div>
+                                <div class="houses__list__item__article__image">
+                                    <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                                </div>
+                            </article>
+                        </li>
                     <?php endwhile ?>
+                </ul>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+        </section>
+        <section class="values">
+            <div class="values__container">
+                <h2 class="values__container__title"><?= get_field('values_title') ?></h2>
+                <?php if (have_rows('values')): ?>
+                    <ul class="values__container__list">
+                        <?php while (have_rows('values')): the_row(); ?>
+                            <li class="values__container__list__item">
+                                <article class="values__container__list__item__article">
+                                    <div class="values__container__list__item__article__img_container">
+                                        <img class="values__container__list__item__article__img_container__img"
+                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>" alt="">
+                                    </div>
+                                    <h3 class="values__container__list__item__article__title"><?= get_sub_field('title') ?></h3>
+                                    <p class="values__container__list__item__article__text"><?= get_sub_field('desc') ?></p>
+                                </article>
+                            </li>
+                        <?php endwhile; ?>
                     </ul>
                 <?php endif; ?>
+            </div>
         </section>
     </main>
 <?php
