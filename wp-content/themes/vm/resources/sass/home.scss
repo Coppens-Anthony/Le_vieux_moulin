@@ -47,10 +47,10 @@
 
   .houses {
     width: $small-width;
-    margin: $double auto;
+    margin: $triple auto;
     @media (min-width: $breakpoint-medium) {
       width: $large-width;
-      margin-top: $quintuple;
+      margin: $quintuple auto;
     }
 
     &__title {
@@ -73,6 +73,7 @@
           margin-bottom: $basic;
         }
         &:nth-child(even){
+          margin-bottom: 0;
          article{
             flex-direction: row-reverse;
            .houses__list__item__article__content_Container{
@@ -115,6 +116,10 @@
   }
   .values{
     background-color: $cyan;
+    margin-bottom: $triple;
+    @media (min-width: $breakpoint-medium) {
+      margin-bottom: $quintuple;
+    }
     &__container{
       padding: $double 0;
       width: $small-width;

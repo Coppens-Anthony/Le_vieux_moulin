@@ -78,6 +78,36 @@ get_header();
                 <?php endif; ?>
             </div>
         </section>
+        <section class="actualities">
+            <div class="actualities__intro">
+                <h2 class="actualities__intro__title"><?= get_field('actualities_title') ?></h2>
+                <?php if (have_rows('actualities_link')): while (have_rows('actualities_link')): the_row(); ?>
+                    <a href="<?= get_sub_field('actualities_link_page') ?>" title="<?= get_sub_field('actualities_link_title') ?>"><?= get_sub_field('actualities_link_text') ?></a>
+                <?php endwhile; endif; ?>
+            </div>
+            <?php
+            $actualities = new WP_Query([
+                'post_type' => 'actuality',
+                'order' => 'ASC',
+                'orderby' => 'date',
+            ]);
+
+            if ($actualities->have_posts()): ?>
+                <ul class="actualities__list">
+                    <?php while ($actualities->have_posts()): $actualities->the_post(); ?>
+                        <li class="actualities__list__item">
+                            <a href="<?= get_the_permalink() ?>"
+                               title="Découvrez l'actualité : '<?= get_field('title') ?>'">Vers l'actualité</a>
+                            <article class="actualities__list__item__article">
+                                <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                                <h3 class="actualities__list__item__article__title"><?= get_field('title') ?></h3>
+                            </article>
+                        </li>
+                    <?php endwhile ?>
+                </ul>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+        </section>
     </main>
 <?php
 get_footer();
