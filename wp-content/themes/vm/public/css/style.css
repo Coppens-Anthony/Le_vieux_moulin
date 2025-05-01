@@ -216,6 +216,7 @@ input {
 }
 .header__brand__logo__img {
   width: 100%;
+  border: none;
 }
 .header__brand__logo__link {
   position: absolute;
@@ -323,6 +324,14 @@ input:checked ~ .header__brand__nav {
   }
 }
 
+.home__intro {
+  height: 95vh;
+}
+@media (min-width: 1000px) {
+  .home__intro {
+    height: 85vh;
+  }
+}
 .home__intro__content {
   text-align: center;
   transform-origin: center;
@@ -359,15 +368,89 @@ input:checked ~ .header__brand__nav {
   overflow: hidden;
   object-fit: cover;
 }
+.home .houses {
+  width: calc(100% - 64px);
+  margin: 2rem auto;
+}
+@media (min-width: 1000px) {
+  .home .houses {
+    width: calc(100% - 64px);
+    margin-top: 5rem;
+  }
+}
+.home .houses__title {
+  font-size: 2rem;
+}
+.home .houses__list {
+  margin-top: 2rem;
+}
+@media (min-width: 1000px) {
+  .home .houses__list {
+    margin-top: 4rem;
+  }
+}
+.home .houses__list__item {
+  margin-bottom: 3rem;
+}
+.home .houses__list__item:nth-child(even) article {
+  flex-direction: row-reverse;
+}
+.home .houses__list__item:nth-child(even) article .houses__list__item__article__content_Container {
+  margin-left: 1rem;
+}
+@media (min-width: 1000px) {
+  .home .houses__list__item__article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.home .houses__list__item__article__content_Container {
+  margin-bottom: 3rem;
+}
+@media (min-width: 1000px) {
+  .home .houses__list__item__article__content_Container {
+    width: 95%;
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+}
+.home .houses__list__item__article__content_Container__text {
+  margin-bottom: 2rem;
+  line-height: 1.2rem;
+}
+.home .houses__list__item__article__image {
+  width: 95%;
+}
+.home .houses__list__item__article__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2em 0 1.2em 0;
+}
 
 html {
   font-family: "Nunito-Regular", "Rubik", "Segoe UI", "Helvetica Neue", sans-serif;
   color: #1A0051;
   position: relative;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: "Fredoka-Regular", "Poppins", "Quicksand", "Arial Rounded MT Bold", sans-serif;
+}
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong {
+  position: relative;
+  font-weight: 400;
+}
+h1 strong::after, h2 strong::after, h3 strong::after, h4 strong::after, h5 strong::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  width: 100%;
+  height: 100%;
+  background-image: url("/wp-content/themes/vm/resources/svg/markup.svg");
+  background-size: 100% 100%;
 }
 
 .sro {
@@ -407,6 +490,13 @@ small {
   .home_page:not(.current_page) {
     color: #FFFFF0 !important;
   }
+}
+img {
+  border: 1px solid #1A0051;
+}
+
+li::marker {
+  content: none;
 }
 
 /*# sourceMappingURL=style.css.map */

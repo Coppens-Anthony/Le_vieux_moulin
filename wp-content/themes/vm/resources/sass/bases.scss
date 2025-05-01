@@ -1,11 +1,29 @@
+
 html {
   font-family: $nunito-regular;
   color: $blue;
   position: relative;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: $fredoka-regular;
+  strong {
+    position: relative;
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: $markup;
+      width: 100%;
+      height: 100%;
+      background-image: url("/wp-content/themes/vm/resources/svg/markup.svg");
+      background-size: 100% 100%;
+    }
+  }
+
 }
 
 .sro {
@@ -45,4 +63,12 @@ small {
   .home_page:not(.current_page) {
     color: $white !important;
   }
+}
+
+img{
+  border: 1px solid $blue;
+}
+
+li::marker{
+  content: none;
 }

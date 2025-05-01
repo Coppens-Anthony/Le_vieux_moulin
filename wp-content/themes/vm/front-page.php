@@ -17,7 +17,8 @@ get_header();
                             <?php while (have_rows('intro_links')): the_row(); ?>
                                 <li class="home__intro__content__links__list__item">
                                     <a href="<?= get_sub_field('link_page') ?>"
-                                       title="<?= get_sub_field('link_title') ?>" class="button"><?= get_sub_field('link_text') ?></a>
+                                       title="<?= get_sub_field('link_title') ?>"
+                                       class="button"><?= get_sub_field('link_text') ?></a>
                                 </li>
                             <?php endwhile; ?>
                         </ul>
@@ -26,6 +27,35 @@ get_header();
             </div>
             <?= wp_get_attachment_image(get_field('background_image'), 'medium', attr: 'class=home__intro__image'); ?>
         </section>
+        <section class="houses">
+            <h2 class="houses__title"><?= get_field('houses_title') ?></h2>
+            <?php
+            $houses = new WP_Query([
+                'post_type' => 'house',
+                'order' => 'ASC',
+                'orderby' => 'date',
+            ]);
+
+            if ($houses->have_posts()): ?>
+                <ul class="houses__list">
+                <?php while ($houses->have_posts()): $houses->the_post(); ?>
+                    <li class="houses__list__item">
+                        <article class="houses__list__item__article">
+                            <h3 class="sro"><?= get_the_title(); ?></h3>
+                            <div class="houses__list__item__article__content_Container">
+                                <p class="houses__list__item__article__content_Container__text"><?= get_field('desc') ?></p>
+                                <a href="<?= get_the_permalink(); ?>" title="Vers le foyer <?= get_the_title(); ?>"
+                                   class="houses__list__item__article__content_Container__link button"><?= get_the_title(); ?></a>
+                            </div>
+                            <div class="houses__list__item__article__image">
+                                <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                            </div>
+                        </article>
+                    </li>
+                    <?php endwhile ?>
+                    </ul>
+                <?php endif; ?>
+        </section>
     </main>
 <?php
-//get_footer();
+get_footer();
