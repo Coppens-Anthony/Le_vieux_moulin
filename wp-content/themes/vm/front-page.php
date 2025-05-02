@@ -82,7 +82,8 @@ get_header();
             <div class="actualities__intro">
                 <h2 class="actualities__intro__title"><?= get_field('actualities_title') ?></h2>
                 <?php if (have_rows('actualities_link')): while (have_rows('actualities_link')): the_row(); ?>
-                    <a class="actualities__intro__link" href="<?= get_sub_field('actualities_link_page') ?>" title="<?= get_sub_field('actualities_link_title') ?>"><?= get_sub_field('actualities_link_text') ?></a>
+                    <a class="actualities__intro__link" href="<?= get_sub_field('actualities_link_page') ?>"
+                       title="<?= get_sub_field('actualities_link_title') ?>"><?= get_sub_field('actualities_link_text') ?></a>
                 <?php endwhile; endif; ?>
             </div>
             <?php
@@ -109,6 +110,43 @@ get_header();
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
         </section>
+        <?php if (have_rows('sections')): ?>
+            <?php while (have_rows('sections')): the_row();
+
+                if (get_row_layout() === 'section'): ?>
+                    <section class="flexible_content">
+                        <div class="flexible_content__intro">
+                            <h2 class="flexible_content__intro__title"><?= get_sub_field('title') ?></h2>
+
+                            <?php if (have_rows('link')): while (have_rows('link')): the_row();
+                                $type = get_sub_field('select');
+
+                                if ($type === 'url') {
+                                    $href = get_sub_field('url');
+                                } elseif ($type === 'lien') {
+                                    $href = get_sub_field('link_to_page');
+                                }
+
+                                if (get_sub_field('text')): ?>
+                                    <a href="<?= $href ?>"
+                                       class="flexible_content__intro__link"
+                                       title="<?= get_sub_field('title') ?>"
+                                        <?= ($type === 'url') ? 'target="_blank" rel="noopener"' : ''; ?>>
+                                        <?= get_sub_field('text') ?>
+                                    </a>
+                                <?php endif; endwhile; endif; ?>
+                        </div>
+                        <div class="flexible_content__content_container">
+                            <div class="flexible_content__content_container__content">
+                                <p class="flexible_content__content_container__content__text"><?= get_sub_field('content') ?></p>
+                                <?php if (get_sub_field('button_title')): ?>
+                                    <p class=""><?= get_sub_field('button_title') ?></p>
+                                <?php endif; ?>
+                            </div>
+                            <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>
+                        </div>
+                    </section>
+                <?php endif; endwhile; endif; ?>
     </main>
 <?php
 get_footer();
