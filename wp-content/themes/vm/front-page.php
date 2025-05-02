@@ -82,14 +82,15 @@ get_header();
             <div class="actualities__intro">
                 <h2 class="actualities__intro__title"><?= get_field('actualities_title') ?></h2>
                 <?php if (have_rows('actualities_link')): while (have_rows('actualities_link')): the_row(); ?>
-                    <a href="<?= get_sub_field('actualities_link_page') ?>" title="<?= get_sub_field('actualities_link_title') ?>"><?= get_sub_field('actualities_link_text') ?></a>
+                    <a class="actualities__intro__link" href="<?= get_sub_field('actualities_link_page') ?>" title="<?= get_sub_field('actualities_link_title') ?>"><?= get_sub_field('actualities_link_text') ?></a>
                 <?php endwhile; endif; ?>
             </div>
             <?php
             $actualities = new WP_Query([
                 'post_type' => 'actuality',
-                'order' => 'ASC',
+                'order' => 'DESC',
                 'orderby' => 'date',
+                'posts_per_page' => 3,
             ]);
 
             if ($actualities->have_posts()): ?>
