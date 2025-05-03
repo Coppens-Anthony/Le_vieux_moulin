@@ -49,6 +49,9 @@
         transition: 1s;
       }
     }
+    .span_home_page{
+      background-color: $blue;
+    }
 
     &__nav {
       visibility: hidden;
