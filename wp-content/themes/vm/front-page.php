@@ -140,7 +140,25 @@ get_header();
                             <div class="flexible_content__content_container__content">
                                 <p class="flexible_content__content_container__content__text"><?= get_sub_field('content') ?></p>
                                 <?php if (get_sub_field('button_title')): ?>
-                                    <p class=""><?= get_sub_field('button_title') ?></p>
+                                    <label for="modal" title="Vers la boîte de don"
+                                           class="flexible_content__content_container__content__label button"><?= get_sub_field('button_title') ?></label>
+                                    <input type="checkbox" id="modal" name="modal" class="modal_input">
+                                    <div class="modal_overlay">
+                                        <label for="modal" class="modal_overlay__label"></label>
+                                        <section class="modal_overlay__modal">
+                                            <div class="modal_overlay__modal__intro">
+                                                <h3 class="modal_overlay__modal__intro__title"><?= get_field('modal_title') ?></h3>
+                                                <label for="modal" class="modal_overlay__modal__intro__close"></label>
+                                            </div>
+                                            <div class="modal_overlay__modal__content_container">
+                                                <div class="modal_overlay__modal__content_container__content">
+                                                    <p class="modal_overlay__modal__content_container__content__text">
+                                                        <?= get_field('modal_text') ?></p>
+                                                </div>
+                                                <?= wp_get_attachment_image(get_field('modal_image'), 'medium'); ?>
+                                            </div>
+                                        </section>
+                                    </div>
                                 <?php endif; ?>
                             </div>
                             <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>

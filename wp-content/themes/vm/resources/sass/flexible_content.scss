@@ -45,11 +45,145 @@
       margin-bottom: $double;
       @media (min-width: $breakpoint-medium) {
         width: 92%;
-        margin-right: $basic;
+        margin: 0 $basic 0 0;
       }
+
       &__text {
         font-size: $content;
         line-height: 1.2rem;
+      }
+
+      &__label {
+        margin-top: $double;
+        display: inline-block;
+      }
+
+      .modal_input:checked ~ .modal_overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+
+
+      .modal_overlay {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+        z-index: 1005;
+        background: rgba(0, 0, 0, .9);
+        transition: opacity .25s ease;
+
+        &__label {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          cursor: pointer;
+        }
+
+        &__modal {
+          transition: top .25s ease;
+          position: absolute;
+          transform-origin: center;
+          transform: translate(-50%, -50%);
+          top: 50vh;
+          right: 0;
+          bottom: 0;
+          left: 50%;
+          width: 90%;
+          margin: auto;
+          overflow: auto;
+          background: $cyan;
+          border-radius: 2em 0 2em 0;
+          padding: $double $double 0;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+
+          @media (min-width: $breakpoint-medium) {
+            height: 60vh;
+            width: 50%;
+          }
+
+          &__intro {
+            position: relative;
+            margin-bottom: $double;
+            @media (min-width: $breakpoint-medium) {
+              margin-bottom: $quadruple;
+            }
+
+            &__title {
+              font-size: $mobileTitle;
+              line-height: 2rem;
+              width: 75%;
+              @media (min-width: $breakpoint-medium) {
+                width: 75%;
+                font-size: $title;
+              }
+            }
+
+            &__close {
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform-origin: center;
+              transform: translate(-50%, -50%);
+              width: 1.1em;
+              height: 1.1em;
+              cursor: pointer;
+            }
+
+            &__close:after,
+            &__close:before {
+              content: '';
+              position: absolute;
+              width: 2px;
+              height: 1.5em;
+              background: $blue;
+              display: block;
+              transform: rotate(45deg);
+              left: 50%;
+              top: 0;
+            }
+
+            &__close:hover:after,
+            &__close:hover:before {
+              opacity: 0.8;
+            }
+
+            &__close:before {
+              transform: rotate(-45deg);
+            }
+          }
+
+            &__content_container {
+              @media (min-width: $breakpoint-medium) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+              &__content {
+                @media (min-width: $breakpoint-medium) {
+                  width: 100%;
+                  margin-right: $basic;
+                }
+
+              &__text {
+                font-size: $content;
+                margin-bottom: $double;
+                @media (min-width: $breakpoint-medium) {
+                  line-height: 1.5rem;
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+
+        }
       }
     }
 
@@ -57,7 +191,6 @@
       width: 100%;
       height: 100%;
       border-radius: 2em 0 2em 0;
-
     }
   }
 }
