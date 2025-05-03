@@ -110,61 +110,9 @@ get_header();
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
         </section>
-        <?php if (have_rows('sections')): ?>
-            <?php while (have_rows('sections')): the_row();
+        <?php render_flexible_money_layout('host'); ?>
+        <?php render_flexible_money_layout('donate'); ?>
 
-                if (get_row_layout() === 'section'): ?>
-                    <section class="flexible_content">
-                        <div class="flexible_content__intro">
-                            <h2 class="flexible_content__intro__title"><?= get_sub_field('title') ?></h2>
-
-                            <?php if (have_rows('link')): while (have_rows('link')): the_row();
-                                $type = get_sub_field('select');
-
-                                if ($type === 'url') {
-                                    $href = get_sub_field('url');
-                                } elseif ($type === 'lien') {
-                                    $href = get_sub_field('link_to_page');
-                                }
-
-                                if (get_sub_field('text')): ?>
-                                    <a href="<?= $href ?>"
-                                       class="flexible_content__intro__link"
-                                       title="<?= get_sub_field('title') ?>"
-                                        <?= ($type === 'url') ? 'target="_blank" rel="noopener"' : ''; ?>>
-                                        <?= get_sub_field('text') ?>
-                                    </a>
-                                <?php endif; endwhile; endif; ?>
-                        </div>
-                        <div class="flexible_content__content_container">
-                            <div class="flexible_content__content_container__content">
-                                <p class="flexible_content__content_container__content__text"><?= get_sub_field('content') ?></p>
-                                <?php if (get_sub_field('button_title')): ?>
-                                    <label for="modal" title="Vers la boîte de don"
-                                           class="flexible_content__content_container__content__label button"><?= get_sub_field('button_title') ?></label>
-                                    <input type="checkbox" id="modal" name="modal" class="modal_input">
-                                    <div class="modal_overlay">
-                                        <label for="modal" class="modal_overlay__label"></label>
-                                        <section class="modal_overlay__modal">
-                                            <div class="modal_overlay__modal__intro">
-                                                <h3 class="modal_overlay__modal__intro__title"><?= get_field('modal_title') ?></h3>
-                                                <label for="modal" class="modal_overlay__modal__intro__close"></label>
-                                            </div>
-                                            <div class="modal_overlay__modal__content_container">
-                                                <div class="modal_overlay__modal__content_container__content">
-                                                    <p class="modal_overlay__modal__content_container__content__text">
-                                                        <?= get_field('modal_text') ?></p>
-                                                </div>
-                                                <?= wp_get_attachment_image(get_field('modal_image'), 'medium'); ?>
-                                            </div>
-                                        </section>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-                            <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>
-                        </div>
-                    </section>
-                <?php endif; endwhile; endif; ?>
     </main>
 <?php
 get_footer();

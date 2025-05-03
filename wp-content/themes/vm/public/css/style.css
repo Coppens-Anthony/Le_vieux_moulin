@@ -805,6 +805,58 @@ input:checked ~ .header__brand__nav {
   height: 100%;
   border-radius: 2em 0 2em 0;
 }
+.donate__follow {
+  width: calc(100% - 64px);
+  margin: 3rem auto;
+}
+@media (min-width: 1000px) {
+  .donate__follow {
+    width: calc(100% - 64px);
+    margin: 5rem auto;
+  }
+}
+@media (min-width: 1000px) {
+  .donate__follow__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.donate__follow__intro__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1000px) {
+  .donate__follow__intro__title {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+}
+.donate__follow__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1000px) {
+  .donate__follow__list {
+    margin-top: 4rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.donate__follow__list__item__article img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5em 0 1.5em 0;
+}
+.donate__follow__list__item__article__title {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
 
 html {
   font-family: "Nunito-Regular", "Rubik", "Segoe UI", "Helvetica Neue", sans-serif;
@@ -832,7 +884,7 @@ h1 strong::after, h2 strong::after, h3 strong::after, h4 strong::after, h5 stron
 }
 @media (min-width: 800px) {
   h1 strong::after, h2 strong::after, h3 strong::after, h4 strong::after, h5 strong::after {
-    top: 2rem;
+    top: 2.2rem;
     height: 100%;
   }
 }

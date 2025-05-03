@@ -107,6 +107,67 @@ function dw_get_navigation_links(string $location): array
 }
 
 
+function render_flexible_money_layout($layout_name): void
+{
+    if (!have_rows('flexible_content')) return;
+
+    while (have_rows('flexible_content')): the_row();
+        if (get_row_layout() !== $layout_name) continue;
+
+        ?>
+        <section class="flexible_content">
+            <div class="flexible_content__intro">
+                <h2 class="flexible_content__intro__title"><?= get_sub_field('title') ?></h2>
+
+                <?php if (have_rows('link')): while (have_rows('link')): the_row();
+                    $type = get_sub_field('select');
+                    $href = ($type === 'url') ? get_sub_field('url') : get_sub_field('link_to_page');
+
+                    if (get_sub_field('text')): ?>
+                        <a href="<?= esc_url($href) ?>"
+                           class="flexible_content__intro__link"
+                           title="<?= esc_attr(get_sub_field('title')) ?>"
+                            <?= ($type === 'url') ? 'target="_blank" rel="noopener"' : ''; ?>>
+                            <?= esc_html(get_sub_field('text')) ?>
+                        </a>
+                    <?php endif; endwhile; endif; ?>
+            </div>
+
+            <div class="flexible_content__content_container">
+                <div class="flexible_content__content_container__content">
+                    <p class="flexible_content__content_container__content__text"><?= get_sub_field('content') ?></p>
+
+                    <?php if (get_sub_field('button_title')): ?>
+                        <label for="modal" title="Vers la boîte de don"
+                               class="flexible_content__content_container__content__label button"><?= get_sub_field('button_title') ?></label>
+                        <input type="checkbox" id="modal" name="modal" class="modal_input">
+
+                        <div class="modal_overlay">
+                            <label for="modal" class="modal_overlay__label"></label>
+                            <section class="modal_overlay__modal">
+                                <div class="modal_overlay__modal__intro">
+                                    <h3 class="modal_overlay__modal__intro__title"><?= get_field('modal_title') ?></h3>
+                                    <label for="modal" class="modal_overlay__modal__intro__close"></label>
+                                </div>
+                                <div class="modal_overlay__modal__content_container">
+                                    <div class="modal_overlay__modal__content_container__content">
+                                        <p class="modal_overlay__modal__content_container__content__text">
+                                            <?= get_field('modal_text') ?></p>
+                                    </div>
+                                    <?= wp_get_attachment_image(get_field('modal_image'), 'medium'); ?>
+                                </div>
+                            </section>
+                        </div>
+                    <?php endif; ?>
+                </div>
+
+                <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>
+            </div>
+        </section>
+    <?php
+
+    endwhile;
+}
 
 
 session_write_close();
