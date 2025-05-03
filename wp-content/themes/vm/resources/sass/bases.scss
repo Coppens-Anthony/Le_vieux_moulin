@@ -76,3 +76,34 @@ img{
 li::marker{
   content: none;
 }
+
+.intro {
+  width: $small-width;
+  margin: $triple auto;
+  @media (min-width: $breakpoint-medium) {
+    width: $large-width;
+    margin: $quintuple auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text{
+    font-size: $content;
+    margin-bottom: $double;
+    @media (min-width: $breakpoint-medium) {
+      width: 48%;
+      margin-bottom: 0;
+    }
+  }
+  &__image_container{
+    @media (min-width: $breakpoint-medium) {
+      width: 48%;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 2em 0 2em 0;
+    }
+  }
+}

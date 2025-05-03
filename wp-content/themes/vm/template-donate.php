@@ -6,10 +6,10 @@ Template Name: Donate Page
 get_header(); ?>
 
     <main class="donate">
-        <section class="donate__intro">
+        <section class="intro">
             <h2 class="sro"><?= get_the_title() ?></h2>
-            <p class="donate__intro__text"><?= get_field('intro')['text'] ?></p>
-            <div class="donate__intro__image_container">
+            <p class="intro__text"><?= get_field('intro')['text'] ?></p>
+            <div class="intro__image_container">
                 <?= wp_get_attachment_image(get_field('intro')['image'], 'medium'); ?>
             </div>
         </section>
