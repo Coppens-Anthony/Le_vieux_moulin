@@ -73,14 +73,16 @@
           width: fit-content;
 
           &:last-child {
-            margin-bottom: 0;
-            background-color: $orange;
-            border-top-left-radius: 1.2em;
-            border-bottom-right-radius: 1.2em;
+            margin: 0;
 
             a {
               display: block;
+              padding: $basic $medium;
+              background-color: $orange;
+              border-radius: 1.2em 0 1.2em 0;
               color: $blue !important;
+              font-size: $core;
+              cursor: pointer;
               //font-family: $fredoka-regular !important;
             }
           }
@@ -127,9 +129,7 @@
           padding-top: 0;
           &__item{
             margin: 0;
-            &:last-child{
-              padding: $basic $medium;
-            }
+            
             a{
               padding: 0;
             }
