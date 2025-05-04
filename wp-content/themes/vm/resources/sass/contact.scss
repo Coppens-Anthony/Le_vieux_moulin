@@ -1,0 +1,138 @@
+.contact {
+  width: $small-width;
+  margin: $triple auto;
+  @media (min-width: $breakpoint-medium) {
+    width: $large-width;
+    margin: $quintuple auto;
+  }
+
+  &__title {
+    font-size: $mobileTitle;
+    line-height: 2rem;
+    margin-bottom: $basic;
+    @media (min-width: $breakpoint-medium) {
+      font-size: $title;
+      margin-bottom: $quadruple;
+    }
+  }
+
+  &__container {
+    @media (min-width: $breakpoint-medium) {
+      display: flex;
+    }
+
+    &__info {
+      &__text {
+        font-size: $content;
+        @media (min-width: $breakpoint-medium) {
+          width: 80%;
+        }
+      }
+
+      &__links_container {
+        margin-top: $double;
+
+        &__list {
+          display: flex;
+          flex-direction: column;
+          gap: $basic;
+
+          &__item {
+            display: flex;
+            align-items: center;
+            gap: $basic;
+
+            img {
+              border: none;
+              width: 8%;
+              @media (min-width: $breakpoint-medium) {
+                width: 3%;
+              }
+            }
+
+            &__link {
+              color: $blue !important;
+              font-family: $fredoka-regular;
+              font-size: $content;
+              @media (min-width: $breakpoint-medium) {
+                font-size: $core;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__form {
+      text-align: center;
+      margin-top: $double;
+
+      @media (min-width: $breakpoint-medium) {
+        width: 40%;
+        margin-top: 0;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: $basic;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          gap: $basic;
+
+          label {
+            font-size: $core;
+            font-family: $fredoka-regular;
+
+            span {
+              color: $orange;
+            }
+          }
+
+          input, textarea, select {
+            font-size: $content;
+            border: 1px solid $blue;
+            padding: $small;
+            border-radius: 1em 0 1em 0;
+            background-color: transparent;
+            color: $blue;
+          }
+
+          textarea {
+            height: 10rem;
+            padding: $small 0 0 2%;
+            resize: none;
+          }
+
+          .error {
+            color: #f61616;
+            font-size: $small-size;
+            display: block;
+            text-align: left;
+            margin-top: $small;
+          }
+        }
+
+        button {
+          align-self: flex-start;
+          margin: auto;
+          border: none;
+        }
+      }
+    }
+  }
+  .success-message {
+    p {
+      color: #20da20;
+      font-size: $core;
+      margin: 0 auto $triple;
+      display: block;
+      width: 77%;
+      font-family: $fredoka-regular;
+      text-align: center;
+    }
+  }
+}
