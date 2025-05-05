@@ -85,6 +85,7 @@ get_header(); ?>
                             <?php while (have_rows('list')): the_row(); ?>
                                 <li class="partner__container__list__item">
                                     <a href="<?= get_sub_field('link') ?>"
+                                       target="_blank" rel="noopener"
                                        title="Vers la page de <?= get_sub_field('name') ?>"><?= get_sub_field('name') ?></a>
                                         <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>
                                 </li>

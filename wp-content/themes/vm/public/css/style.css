@@ -759,10 +759,18 @@ input:checked ~ .header__brand__nav {
   position: relative;
   height: 22rem;
   width: 100%;
+  aspect-ratio: 1/1;
 }
 .about .history__content_container__images img {
   width: 50%;
   object-fit: cover;
+  height: 8rem;
+}
+@media (min-width: 800px) {
+  .about .history__content_container__images img {
+    width: 40%;
+    height: auto;
+  }
 }
 .about .history__content_container__images img:first-child {
   position: absolute;

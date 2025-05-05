@@ -43,10 +43,16 @@
         position: relative;
         height: 22rem;
         width: 100%;
+        aspect-ratio: 1 / 1;
 
         img {
           width: 50%;
           object-fit: cover;
+          height: 8rem;
+          @media (min-width: $breakpoint-tablet) {
+            width: 40%;
+            height: auto;
+          }
 
           &:first-child {
             position: absolute;
