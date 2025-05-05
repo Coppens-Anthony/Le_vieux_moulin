@@ -110,7 +110,7 @@ function dw_get_navigation_links(string $location): array
 }
 
 
-function render_flexible_money_layout($layout_name): void
+function render_flexible_money_layout($layout_name, $id): void
 {
     if (!have_rows('flexible_content')) return;
 
@@ -118,7 +118,7 @@ function render_flexible_money_layout($layout_name): void
         if (get_row_layout() !== $layout_name) continue;
 
         ?>
-        <section class="flexible_content">
+        <section class="flexible_content" id="<?= $id ?>">
             <div class="flexible_content__intro">
                 <h2 class="flexible_content__intro__title"><?= get_sub_field('title') ?></h2>
 
@@ -127,11 +127,11 @@ function render_flexible_money_layout($layout_name): void
                     $href = ($type === 'url') ? get_sub_field('url') : get_sub_field('link_to_page');
 
                     if (get_sub_field('text')): ?>
-                        <a href="<?= esc_url($href) ?>"
+                        <a href="<?= $href ?>"
                            class="flexible_content__intro__link"
-                           title="<?= esc_attr(get_sub_field('title')) ?>"
+                           title="<?= get_sub_field('title') ?>"
                             <?= ($type === 'url') ? 'target="_blank" rel="noopener"' : ''; ?>>
-                            <?= esc_html(get_sub_field('text')) ?>
+                            <?= get_sub_field('text') ?>
                         </a>
                     <?php endif; endwhile; endif; ?>
             </div>

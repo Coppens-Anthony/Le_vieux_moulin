@@ -58,17 +58,41 @@ get_header(); ?>
                         <ul class="downloading__container__list">
                             <?php while (have_rows('list')): the_row(); ?>
                                 <li class="downloading__container__list__item">
-                                    <a href="<?= get_sub_field('file'); ?>" title="Téléchargez '<?= get_sub_field('title'); ?>'" download> </a>
-                                        <p><?= get_sub_field('title'); ?></p>
-                                        <img src="/wp-content/themes/vm/resources/svg/download.svg"
-                                             alt="Icône de téléchargement">
+                                    <a href="<?= get_sub_field('file'); ?>"
+                                       title="Téléchargez '<?= get_sub_field('title'); ?>'" download> </a>
+                                    <p><?= get_sub_field('title'); ?></p>
+                                    <img src="/wp-content/themes/vm/resources/svg/download.svg"
+                                         alt="Icône de téléchargement">
                                 </li>
                             <?php endwhile; ?>
                         </ul>
                     <?php endif; endwhile; endif; ?>
             </div>
         </section>
-
+        <section class="partner flexible_content">
+            <div class="flexible_content__intro">
+                <h2 class="flexible_content__intro__title"><?= get_field('partner')['title'] ?></h2>
+                <a href="<?= get_field('partner')['link_to_page'] ?>"
+                   class="flexible_content__intro__link"
+                   title="Vers la page contact"><?= get_field('partner')['link'] ?>
+                </a>
+            </div>
+            <p class="partner__content"><?= get_field('partner')['content'] ?></p>
+            <div class="partner__container">
+                <?php if (have_rows('partner')): while (have_rows('partner')): the_row(); ?>
+                    <?php if (have_rows('list')): ?>
+                        <ul class="partner__container__list">
+                            <?php while (have_rows('list')): the_row(); ?>
+                                <li class="partner__container__list__item">
+                                    <a href="<?= get_sub_field('link') ?>"
+                                       title="Vers la page de <?= get_sub_field('name') ?>"><?= get_sub_field('name') ?></a>
+                                        <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
+                    <?php endif; endwhile; endif; ?>
+            </div>
+        </section>
     </main>
 
 <?php get_footer();
