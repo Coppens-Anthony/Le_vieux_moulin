@@ -50,6 +50,25 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <section class="downloading" id="downloading">
+            <h2 class="downloading__title"><?= get_field('downloading')['title'] ?></h2>
+            <div class="downloading__container">
+                <?php if (have_rows('downloading')): while (have_rows('downloading')): the_row(); ?>
+                    <?php if (have_rows('list')): ?>
+                        <ul class="downloading__container__list">
+                            <?php while (have_rows('list')): the_row(); ?>
+                                <li class="downloading__container__list__item">
+                                    <a href="<?= get_sub_field('file'); ?>" title="Téléchargez '<?= get_sub_field('title'); ?>'" download> </a>
+                                        <p><?= get_sub_field('title'); ?></p>
+                                        <img src="/wp-content/themes/vm/resources/svg/download.svg"
+                                             alt="Icône de téléchargement">
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
+                    <?php endif; endwhile; endif; ?>
+            </div>
+        </section>
+
     </main>
 
 <?php get_footer();
