@@ -1,0 +1,73 @@
+.about {
+  .history {
+    width: $small-width;
+    margin: $triple auto;
+    @media (min-width: $breakpoint-medium) {
+      width: $large-width;
+      margin: $quintuple auto;
+    }
+
+    &__title {
+      font-size: $mobileTitle;
+      line-height: 2rem;
+      margin-bottom: $basic;
+      @media (min-width: $breakpoint-medium) {
+        font-size: $title;
+        margin-bottom: 0;
+      }
+    }
+
+    &__content_container {
+      margin-top: $double;
+      @media (min-width: $breakpoint-medium) {
+        margin-top: $quadruple;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      &__content {
+        margin-bottom: $double;
+        display: flex;
+        flex-direction: column;
+        gap: $basic;
+        font-size: $content;
+        line-height: 1.2rem;
+        @media (min-width: $breakpoint-medium) {
+          width: 92%;
+          margin: auto $triple auto 0;
+        }
+      }
+
+      &__images {
+        position: relative;
+        height: 22rem;
+        width: 100%;
+
+        img {
+          width: 50%;
+          object-fit: cover;
+          &:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:nth-child(2) {
+            position: absolute;
+            transform-origin: center;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+          }
+
+          &:last-child {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
