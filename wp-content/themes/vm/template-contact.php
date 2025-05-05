@@ -105,7 +105,7 @@ get_header(); ?>
                                   placeholder="Renseignez votre message..."></textarea>
                     </div>
                     <input type="hidden" name="action" value="dw_submit_contact_form">
-                    <button type="submit" title="Soumettre vos donn&eacute;es" name="submit" class="button">Envoyer</button>
+                    <button type="submit" title="Soumettre vos donn&eacute;es" name="submit" class="button">Soumettre</button>
                 </form>
             </section>
         </div>
