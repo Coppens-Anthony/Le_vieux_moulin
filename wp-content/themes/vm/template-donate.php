@@ -30,9 +30,9 @@ get_header(); ?>
                 </ul>
             <?php endif; ?>
         </section>
-        <?php render_flexible_money_layout('money', 'dons_financiers'); ?>
-        <?php render_flexible_money_layout('material','dons_materiels'); ?>
-        <?php render_flexible_money_layout('volunteer', 'benevolat'); ?>
+        <?php render_flexible_layout('money', 'dons_financiers'); ?>
+        <?php render_flexible_layout('material','dons_materiels'); ?>
+        <?php render_flexible_layout('volunteer', 'benevolat'); ?>
     </main>
 
 <?php get_footer();

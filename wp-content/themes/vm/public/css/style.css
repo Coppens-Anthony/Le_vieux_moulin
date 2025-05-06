@@ -371,81 +371,6 @@ input:checked ~ .header__brand__nav {
   overflow: hidden;
   object-fit: cover;
 }
-.home .houses {
-  width: calc(100% - 64px);
-  margin: 3rem auto;
-}
-@media (min-width: 1000px) {
-  .home .houses {
-    width: calc(100% - 64px);
-    margin: 5rem auto;
-  }
-}
-.home .houses__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-@media (min-width: 1000px) {
-  .home .houses__title {
-    font-size: 2rem;
-  }
-}
-.home .houses__list {
-  margin-top: 2rem;
-}
-@media (min-width: 1000px) {
-  .home .houses__list {
-    margin-top: 4rem;
-  }
-}
-.home .houses__list__item {
-  margin-bottom: 3rem;
-}
-@media (min-width: 1000px) {
-  .home .houses__list__item {
-    margin-bottom: 1rem;
-  }
-}
-.home .houses__list__item:nth-child(even) {
-  margin-bottom: 0;
-}
-.home .houses__list__item:nth-child(even) article {
-  flex-direction: row-reverse;
-}
-.home .houses__list__item:nth-child(even) article .houses__list__item__article__content_Container {
-  margin-left: 1rem;
-}
-@media (min-width: 1000px) {
-  .home .houses__list__item__article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.home .houses__list__item__article__content_Container {
-  margin-bottom: 3rem;
-}
-@media (min-width: 1000px) {
-  .home .houses__list__item__article__content_Container {
-    width: 92%;
-    margin-right: 1rem;
-    margin-bottom: 0;
-  }
-}
-.home .houses__list__item__article__content_Container__text {
-  margin-bottom: 2rem;
-  line-height: 1.2rem;
-}
-.home .houses__list__item__article__image {
-  width: 95%;
-}
-.home .houses__list__item__article__image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 2em 0 2em 0;
-  object-fit: cover;
-  aspect-ratio: 5/3;
-}
 .home .actualities {
   width: calc(100% - 64px);
   margin: 3rem auto;
@@ -912,6 +837,137 @@ input:checked ~ .header__brand__nav {
   width: 100%;
   height: 8rem;
   object-fit: contain;
+}
+
+.houses {
+  width: calc(100% - 64px);
+  margin: 3rem auto;
+}
+@media (min-width: 1000px) {
+  .houses {
+    width: calc(100% - 64px);
+    margin: 5rem auto;
+  }
+}
+.houses__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (min-width: 1000px) {
+  .houses__title {
+    font-size: 2rem;
+  }
+}
+.houses__list {
+  margin-top: 2rem;
+}
+@media (min-width: 1000px) {
+  .houses__list {
+    margin-top: 4rem;
+  }
+}
+.houses__list__item {
+  margin-bottom: 3rem;
+}
+@media (min-width: 1000px) {
+  .houses__list__item {
+    margin-bottom: 1rem;
+  }
+}
+.houses__list__item:nth-child(even) {
+  margin-bottom: 0;
+}
+.houses__list__item:nth-child(even) article {
+  flex-direction: row-reverse;
+}
+.houses__list__item:nth-child(even) article .houses__list__item__article__content_Container {
+  margin-left: 1rem;
+}
+@media (min-width: 1000px) {
+  .houses__list__item__article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.houses__list__item__article__content_Container {
+  margin-bottom: 3rem;
+}
+@media (min-width: 1000px) {
+  .houses__list__item__article__content_Container {
+    width: 92%;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+.houses__list__item__article__content_Container__text {
+  margin-bottom: 2rem;
+  line-height: 1.2rem;
+}
+.houses__list__item__article__image {
+  width: 95%;
+}
+.houses__list__item__article__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2em 0 2em 0;
+  object-fit: cover;
+  aspect-ratio: 5/3;
+}
+
+.life .day__content {
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1000px) {
+  .life .day__content {
+    width: 50%;
+    margin-top: 4rem;
+  }
+}
+.life .day__container {
+  margin-top: 2rem;
+}
+@media (min-width: 1000px) {
+  .life .day__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.life .day__container__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1000px) {
+  .life .day__container__list {
+    margin-bottom: 0;
+  }
+}
+.life .day__container__list__item {
+  display: flex;
+  align-items: center;
+}
+.life .day__container__list__item img {
+  margin-right: 0.5rem;
+  width: 5%;
+  height: auto;
+  border: none;
+}
+.life .day__container__list__item p {
+  font-size: 1.1rem;
+  font-family: "Fredoka-Regular", "Poppins", "Quicksand", "Arial Rounded MT Bold", sans-serif;
+}
+.life .day__container__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 6/3;
+  object-fit: cover;
+  border-radius: 2em 0 2em 0;
 }
 
 .donate__follow {
@@ -1386,7 +1442,9 @@ li::marker {
 }
 .intro__image_container img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 8/5;
+  object-fit: cover;
   border-radius: 2em 0 2em 0;
 }
 @media (min-width: 1000px) {

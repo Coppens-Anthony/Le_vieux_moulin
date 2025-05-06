@@ -110,8 +110,8 @@ get_header();
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
         </section>
-        <?php render_flexible_money_layout('host', ''); ?>
-        <?php render_flexible_money_layout('donate', ''); ?>
+        <?php render_flexible_layout('host', ''); ?>
+        <?php render_flexible_layout('donate', ''); ?>
 
     </main>
 <?php

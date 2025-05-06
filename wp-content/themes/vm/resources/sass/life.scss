@@ -1,0 +1,58 @@
+.life {
+  .day {
+    &__content {
+      font-size: $content;
+      line-height: 1.2rem;
+      margin-top: $double;
+      @media (min-width: $breakpoint-medium) {
+        width: 50%;
+        margin-top: $quadruple;
+      }
+    }
+
+    &__container {
+      margin-top: $double;
+      @media (min-width: $breakpoint-medium) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: $basic;
+        width: 100%;
+        margin-bottom: $basic;
+        @media (min-width: $breakpoint-medium) {
+          margin-bottom: 0;
+        }
+
+        &__item {
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: $small;
+            width: 5%;
+            height: auto;
+            border: none;
+          }
+
+          p {
+            font-size: $content;
+            font-family: $fredoka-regular;
+          }
+        }
+      }
+
+      &__img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 6 / 3;
+        object-fit: cover;
+        border-radius: 2em 0 2em 0;
+      }
+    }
+  }
+}

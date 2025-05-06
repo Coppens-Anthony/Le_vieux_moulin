@@ -1,0 +1,71 @@
+.houses {
+  width: $small-width;
+  margin: $triple auto;
+  @media (min-width: $breakpoint-medium) {
+    width: $large-width;
+    margin: $quintuple auto;
+  }
+
+  &__title {
+    font-size: $mobileTitle;
+    line-height: 2rem;
+    @media (min-width: $breakpoint-medium) {
+      font-size: $title;
+    }
+  }
+
+  &__list {
+    margin-top: $double;
+    @media (min-width: $breakpoint-medium) {
+      margin-top: $quadruple;
+    }
+
+    &__item {
+      margin-bottom: $triple;
+      @media (min-width: $breakpoint-medium) {
+        margin-bottom: $basic;
+      }
+      &:nth-child(even){
+        margin-bottom: 0;
+        article{
+          flex-direction: row-reverse;
+          .houses__list__item__article__content_Container{
+            margin-left: $basic;
+          }
+        }
+      }
+      &__article {
+        @media (min-width: $breakpoint-medium) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &__content_Container {
+          margin-bottom: $triple;
+          @media (min-width: $breakpoint-medium) {
+            width: 92%;
+            margin-right: $basic;
+            margin-bottom: 0;
+          }
+
+          &__text {
+            margin-bottom: $double;
+            line-height: 1.2rem;
+          }
+        }
+
+        &__image {
+          width: 95%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 2em 0 2em 0;
+            object-fit: cover;
+            aspect-ratio: 5 / 3;
+          }
+        }
+      }
+    }
+  }
+}

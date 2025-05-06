@@ -110,7 +110,7 @@ function dw_get_navigation_links(string $location): array
 }
 
 
-function render_flexible_money_layout($layout_name, $id): void
+function render_flexible_layout($layout_name, $id): void
 {
     if (!have_rows('flexible_content')) return;
 
