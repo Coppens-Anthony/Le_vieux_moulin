@@ -49,6 +49,7 @@
           width: 50%;
           object-fit: cover;
           height: 8rem;
+          border-radius: 1.5em 0 1.5em 0;
           @media (min-width: $breakpoint-tablet) {
             width: 40%;
             height: auto;

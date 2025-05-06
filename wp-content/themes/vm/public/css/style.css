@@ -443,6 +443,8 @@ input:checked ~ .header__brand__nav {
   width: 100%;
   height: 100%;
   border-radius: 2em 0 2em 0;
+  object-fit: cover;
+  aspect-ratio: 5/3;
 }
 .home .actualities {
   width: calc(100% - 64px);
@@ -623,13 +625,14 @@ input:checked ~ .header__brand__nav {
   overflow: auto;
   background: #AFEBEA;
   border-radius: 2em 0 2em 0;
-  padding: 2rem 2rem 0;
+  padding: 2rem 2rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 @media (min-width: 1000px) {
   .flexible_content__content_container__content .modal_overlay__modal {
-    height: 60vh;
+    top: 50vh;
+    height: 65vh;
     width: 50%;
   }
 }
@@ -705,8 +708,10 @@ input:checked ~ .header__brand__nav {
 }
 .flexible_content__content_container img {
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 2em 0 2em 0;
+  aspect-ratio: 6/3;
+  object-fit: cover;
 }
 
 .about .history {
@@ -765,6 +770,7 @@ input:checked ~ .header__brand__nav {
   width: 50%;
   object-fit: cover;
   height: 8rem;
+  border-radius: 1.5em 0 1.5em 0;
 }
 @media (min-width: 800px) {
   .about .history__content_container__images img {
@@ -1060,7 +1066,8 @@ input:checked ~ .header__brand__nav {
 }
 @media (min-width: 1000px) {
   .single_actuality__content__image_container img {
-    height: 75vh;
+    height: 100%;
+    aspect-ratio: 7/3;
     border-radius: 5em 0 5em 0;
   }
 }

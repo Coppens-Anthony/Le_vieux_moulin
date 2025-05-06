@@ -27,7 +27,9 @@
         object-fit: cover;
         border-radius: 2em 0 2em 0;
         @media (min-width: $breakpoint-medium) {
-          height: 75vh;
+          height: 100%;
+          aspect-ratio: 7 / 3;
+
           border-radius: 5em 0 5em 0;
         }
       }
