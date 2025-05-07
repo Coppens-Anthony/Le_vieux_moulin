@@ -18,7 +18,7 @@ get_header(); ?>
                 <p><?= $success; ?></p>
             </div>
         <?php endif; ?>
-        <h2 class="contact__title"><?= get_field('title') ?></h2>
+        <h2 class="contact__title"><?= get_field('title', false, false) ?></h2>
         <div class="contact__container">
             <section class="contact__container__info">
                 <h3 class="sro"><?= get_the_title() ?></h3>

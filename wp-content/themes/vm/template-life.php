@@ -15,7 +15,7 @@ get_header(); ?>
             </div>
         </section>
         <section class="houses">
-            <h2 class="houses__title"><?= get_field('houses_title') ?></h2>
+            <h2 class="houses__title"><?= get_field('houses_title', false, false) ?></h2>
             <?php
             $houses = new WP_Query([
                 'post_type' => 'house',
@@ -47,7 +47,7 @@ get_header(); ?>
         <?php render_flexible_layout('life', ''); ?>
         <?php render_flexible_layout('family', ''); ?>
         <section class="flexible_content day">
-            <h2 class="flexible_content__intro__title"><?= get_field('day')['title'] ?></h2>
+            <h2 class="flexible_content__intro__title"><?= get_field('day')['title'], false, false ?></h2>
             <p class="day__content"><?= get_field('day')['desc'] ?></p>
             <div class="day__container">
                 <?php if (have_rows('day')): while (have_rows('day')): the_row(); ?>

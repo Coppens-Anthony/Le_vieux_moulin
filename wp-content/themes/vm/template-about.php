@@ -18,7 +18,7 @@ get_header(); ?>
         </section>
         <section class="values">
             <div class="values__container">
-                <h2 class="values__container__title"><?= get_field('values_title') ?></h2>
+                <h2 class="values__container__title"><?= get_field('values_title', false, false) ?></h2>
                 <?php if (have_rows('values')): ?>
                     <ul class="values__container__list">
                         <?php while (have_rows('values')): the_row(); ?>
@@ -38,7 +38,7 @@ get_header(); ?>
             </div>
         </section>
         <section class="history">
-            <h2 class="history__title"><?= get_field('history')['title'] ?></h2>
+            <h2 class="history__title"><?= get_field('history')['title'], false, false ?></h2>
             <div class="history__content_container">
                 <div class="history__content_container__content">
                     <?= get_field('history')['content'] ?>
@@ -51,7 +51,7 @@ get_header(); ?>
             </div>
         </section>
         <section class="downloading" id="downloading">
-            <h2 class="downloading__title"><?= get_field('downloading')['title'] ?></h2>
+            <h2 class="downloading__title"><?= get_field('downloading')['title'], false, false ?></h2>
             <div class="downloading__container">
                 <?php if (have_rows('downloading')): while (have_rows('downloading')): the_row(); ?>
                     <?php if (have_rows('list')): ?>
@@ -71,7 +71,7 @@ get_header(); ?>
         </section>
         <section class="partner flexible_content">
             <div class="flexible_content__intro">
-                <h2 class="flexible_content__intro__title"><?= get_field('partner')['title'] ?></h2>
+                <h2 class="flexible_content__intro__title"><?= get_field('partner')['title'], false, false ?></h2>
                 <a href="<?= get_field('partner')['link_to_page'] ?>"
                    class="flexible_content__intro__link"
                    title="Vers la page contact"><?= get_field('partner')['link'] ?>

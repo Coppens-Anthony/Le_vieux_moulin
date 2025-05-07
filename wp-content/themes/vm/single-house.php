@@ -11,7 +11,7 @@ get_header(); ?>
         </section>
         <section class="values stats">
             <div class="values__container">
-                <h2 class="values__container__title"><?= get_field('values_title') ?></h2>
+                <h2 class="values__container__title"><?= get_field('values_title', false, false) ?></h2>
                 <?php if (have_rows('values')): ?>
                     <ul class="values__container__list stats__list">
                         <?php while (have_rows('values')): the_row(); ?>
@@ -32,11 +32,11 @@ get_header(); ?>
         </section>
 
         <section class="map">
-            <h2 class="map__title"><?= get_field('map')['title'] ?></h2>
+            <h2 class="map__title"><?= get_field('map')['title'], false, false ?></h2>
             <?= wp_get_attachment_image(get_field('map')['image'], 'large'); ?>
         </section>
         <section class="flexible_content other">
-            <h2 class="other__title"><?= get_field('other_title') ?></h2>
+            <h2 class="other__title"><?= get_field('other_title', false, false) ?></h2>
             <?php
             $other = new WP_Query([
                 'post_type' => 'house',

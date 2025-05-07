@@ -15,7 +15,7 @@ get_header(); ?>
         </section>
         <section class="donate__follow">
             <div class="donate__follow__intro">
-                <h2 class="donate__follow__intro__title"><?= get_field('donation')['title'] ?></h2>
+                <h2 class="donate__follow__intro__title"><?= get_field('donation')['title'], false, false ?></h2>
             </div>
             <?php if (have_rows('donation_projects')): ?>
                 <ul class="donate__follow__list">

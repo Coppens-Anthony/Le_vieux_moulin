@@ -121,7 +121,7 @@ function render_flexible_layout($layout_name, $id): void
         ?>
         <section class="flexible_content" id="<?= $id ?>">
             <div class="flexible_content__intro">
-                <h2 class="flexible_content__intro__title"><?= get_sub_field('title') ?></h2>
+                <h2 class="flexible_content__intro__title"><?= get_sub_field('title', false, false) ?></h2>
 
                 <?php if (have_rows('link')): while (have_rows('link')): the_row();
                     $type = get_sub_field('select');
