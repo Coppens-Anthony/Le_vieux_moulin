@@ -53,10 +53,11 @@
         line-height: 1.2rem;
       }
 
-      &__label {
+      &__label, a {
         margin-top: $double;
         display: inline-block;
       }
+
 
       .modal_input:checked ~ .modal_overlay {
         opacity: 1;

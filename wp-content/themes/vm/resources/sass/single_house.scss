@@ -1,0 +1,40 @@
+.single_house {
+  .map {
+    width: $small-width;
+    margin: $triple auto;
+    @media (min-width: $breakpoint-medium) {
+      width: $large-width;
+      margin: $quintuple auto;
+    }
+
+    &__title {
+      font-size: $mobileTitle;
+      line-height: 2rem;
+      margin-bottom: $basic;
+      @media (min-width: $breakpoint-medium) {
+        font-size: $title;
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 3.5em 0 3.5em 0;
+      margin-top: $double;
+      @media (min-width: $breakpoint-medium) {
+        margin-top: $quadruple;
+      }
+    }
+  }
+  .other{
+    &__title {
+      font-size: $mobileTitle;
+      line-height: 2rem;
+      margin-bottom: $basic;
+      @media (min-width: $breakpoint-medium) {
+        font-size: $title;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

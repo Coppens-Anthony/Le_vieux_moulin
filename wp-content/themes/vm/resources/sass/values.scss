@@ -52,3 +52,18 @@
     }
   }
 }
+.stats{
+  &__list{
+    @media (min-width: $breakpoint-medium) {
+      margin-top: $quadruple;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    p{
+      font-size: $title;
+    }
+    h3{
+      font-size: $core;
+    }
+  }
+}

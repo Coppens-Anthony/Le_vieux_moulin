@@ -41,6 +41,7 @@ register_post_type('house', [
     'has_archive' => true,
     'menu_icon' => 'dashicons-admin-home',
     'public' => true,
+    'post_status' => 'publish',
     'rewrite' => [
         'slug' => 'foyers',
     ],
