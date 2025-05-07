@@ -30,7 +30,17 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </section>
-
+        <section class="gallery">
+            <h2 class="gallery__title"><?= get_field('gallery')['title'], false, false ?></h2>
+            <?php if (have_rows('gallery')): while (have_rows('gallery')): the_row();
+                $i = 1;?>
+                <?php if (have_rows('images')): ?>
+                    <?php while (have_rows('images')): the_row();
+                         ?>
+                        <?= wp_get_attachment_image(get_sub_field('image'), 'medium', attr: "class=index_$i");
+                        $i++ ?>
+                    <?php endwhile; endif; endwhile; endif; ?>
+        </section>
         <section class="map">
             <h2 class="map__title"><?= get_field('map')['title'], false, false ?></h2>
             <?= wp_get_attachment_image(get_field('map')['image'], 'large'); ?>
@@ -44,19 +54,19 @@ get_header(); ?>
                 'post__not_in' => [get_the_ID()],
             ]);
             if ($other->have_posts()) :while ($other->have_posts()) : $other->the_post();
-                    $other_id = get_the_ID(); ?>
-                    <div class="flexible_content__content_container">
-                        <div class="flexible_content__content_container__content">
-                            <p class="flexible_content__content_container__content__text">
-                                <?= get_field('desc', $other_id) ?>
-                            </p>
-                            <a title="Vers le second foyer" href="<?= get_permalink($other_id) ?>" class="button">
-                                <?= get_the_title( $other_id) ?>
-                            </a>
-                        </div>
-                        <?= wp_get_attachment_image(get_field('image', $other_id), 'medium'); ?>
+                $other_id = get_the_ID(); ?>
+                <div class="flexible_content__content_container">
+                    <div class="flexible_content__content_container__content">
+                        <p class="flexible_content__content_container__content__text">
+                            <?= get_field('desc', $other_id) ?>
+                        </p>
+                        <a title="Vers le second foyer" href="<?= get_permalink($other_id) ?>" class="button">
+                            <?= get_the_title($other_id) ?>
+                        </a>
                     </div>
-                <?php endwhile;
+                    <?= wp_get_attachment_image(get_field('image', $other_id), 'medium'); ?>
+                </div>
+            <?php endwhile;
                 wp_reset_postdata();
             endif; ?>
         </section>
