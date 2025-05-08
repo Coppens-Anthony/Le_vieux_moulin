@@ -19,7 +19,7 @@ get_header(); ?>
                                 <article class="values__container__list__item__article">
                                     <div class="values__container__list__item__article__img_container">
                                         <img class="values__container__list__item__article__img_container__img"
-                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>" alt="">
+                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>">
                                     </div>
                                     <p class="values__container__list__item__article__title"><?= get_sub_field('desc') ?></p>
                                     <h3 class="values__container__list__item__article__text"><?= get_sub_field('title') ?></h3>

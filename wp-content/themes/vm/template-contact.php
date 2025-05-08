@@ -26,7 +26,7 @@ get_header(); ?>
                 <div class="contact__container__info__links_container">
                     <ul class="contact__container__info__links_container__list">
                         <li class="contact__container__info__links_container__list__item">
-                            <img src="/wp-content/themes/vm/resources/svg/mail.svg" alt="Icône d'enveloppe">
+                            <img src="/wp-content/themes/vm/resources/svg/mail.svg" alt="Ic&ograve;ne d&apos;enveloppe">
                             <a class="contact__container__info__links_container__list__item__link"
                                title="Envoyez-nous un mail"
                                href="mailto:<?= get_field('mail') ?>">
@@ -34,19 +34,19 @@ get_header(); ?>
                             </a>
                         </li>
                         <li class="contact__container__info__links_container__list__item">
-                            <img src="/wp-content/themes/vm/resources/svg/phone.svg" alt="Icône de téléphone">
+                            <img src="/wp-content/themes/vm/resources/svg/phone.svg" alt="Ic&ograve;ne de t&eacute;l&eacute;phone">
                             <a class="contact__container__info__links_container__list__item__link"
-                               title="Téléphonez-nous"
+                               title="T&eacute;l&eacute;phonez-nous"
                                href="tel:<?= get_field('tel') ?>">
-                                Téléphone - <?= get_field('tel') ?>
+                                T&eacute;l&eacute;phone - <?= get_field('tel') ?>
                             </a>
                         </li>
                         <li class="contact__container__info__links_container__list__item">
-                            <img src="/wp-content/themes/vm/resources/svg/download.svg" alt="Icône de téléchargement">
+                            <img src="/wp-content/themes/vm/resources/svg/download.svg" alt="Ic&ograve;ne de t&eacute;l&eacute;chargement">
                             <a class="contact__container__info__links_container__list__item__link"
-                               title="Vers les ressources téléchargeables"
+                               title="Vers les ressources t&eacute;l&eacute;chargeables"
                                href="<?= get_the_permalink(get_page_by_path('a-propos')->ID) . "#downloading" ?>">
-                                Ressources téléchargeables
+                                Ressources t&eacute;l&eacute;chargeables
                             </a>
                         </li>
                     </ul>

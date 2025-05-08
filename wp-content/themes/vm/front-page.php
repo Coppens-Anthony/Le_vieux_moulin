@@ -67,7 +67,7 @@ get_header();
                                 <article class="values__container__list__item__article">
                                     <div class="values__container__list__item__article__img_container">
                                         <img class="values__container__list__item__article__img_container__img"
-                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>" alt="">
+                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>">
                                     </div>
                                     <h3 class="values__container__list__item__article__title"><?= get_sub_field('title') ?></h3>
                                     <p class="values__container__list__item__article__text"><?= get_sub_field('desc') ?></p>
@@ -99,7 +99,7 @@ get_header();
                     <?php while ($actualities->have_posts()): $actualities->the_post(); ?>
                         <li class="actualities__list__item">
                             <a href="<?= get_the_permalink() ?>"
-                               title="Découvrez l'actualité : '<?= get_field('title') ?>'">Vers l'actualité</a>
+                               title="D&eacute;couvrez l'actualit&eacute; : '<?= get_field('title') ?>'">Vers l'actualit&eacute;</a>
                             <article class="actualities__list__item__article">
                                 <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
                                 <h3 class="actualities__list__item__article__title"><?= get_field('title') ?></h3>

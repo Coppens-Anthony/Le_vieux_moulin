@@ -28,7 +28,7 @@ get_header(); ?>
                 <?php while ($actualities->have_posts()): $actualities->the_post(); ?>
                     <li class="actualities__all_actualities__list__item">
                         <a href="<?= get_the_permalink() ?>"
-                           title="Découvrez l'actualité : '<?= get_field('title') ?>'">Vers l'actualité</a>
+                           title="D&eacute;couvrez l&apos;actualit&eacute; : '<?= get_field('title') ?>'">Vers l&apos;actualit&eacute;</a>
                         <article class="actualities__all_actualities__list__item__article">
                             <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
                             <h3 class="actualities__all_actualities__list__item__article__title"><?= get_field('title') ?></h3>

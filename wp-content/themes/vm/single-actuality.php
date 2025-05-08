@@ -10,7 +10,7 @@
             </div>
         </section>
         <section class="actualities__all_actualities">
-            <h2 class="actualities__all_actualities__title">D'autres <strong>actualités</strong> à lire</h2>
+            <h2 class="actualities__all_actualities__title">D&apos;autres <strong>actualit&eacute;s</strong> &agrave; lire</h2>
             <?php
             $actualities = new WP_Query([
                 'post_type' => 'actuality',
@@ -25,7 +25,7 @@
                     <?php while ($actualities->have_posts()): $actualities->the_post(); ?>
                         <li class="actualities__all_actualities__list__item">
                             <a href="<?= get_the_permalink() ?>"
-                               title="Découvrez l'actualité : '<?= get_the_title() ?>'">Vers l'actualité</a>
+                               title="D&eacute;couvrez l&apos;actualit&eacute; : '<?= get_the_title() ?>'">Vers l&apos;actualit&eacute;</a>
                             <article class="actualities__all_actualities__list__item__article">
                                 <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
                                 <h3 class="actualities__all_actualities__list__item__article__title"><?= get_field('title') ?></h3>

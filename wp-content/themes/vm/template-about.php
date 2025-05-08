@@ -26,7 +26,7 @@ get_header(); ?>
                                 <article class="values__container__list__item__article">
                                     <div class="values__container__list__item__article__img_container">
                                         <img class="values__container__list__item__article__img_container__img"
-                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>" alt="">
+                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>">
                                     </div>
                                     <h3 class="values__container__list__item__article__title"><?= get_sub_field('title') ?></h3>
                                     <p class="values__container__list__item__article__text"><?= get_sub_field('desc') ?></p>
@@ -59,10 +59,10 @@ get_header(); ?>
                             <?php while (have_rows('list')): the_row(); ?>
                                 <li class="downloading__container__list__item">
                                     <a href="<?= get_sub_field('file'); ?>"
-                                       title="Téléchargez '<?= get_sub_field('title'); ?>'" download> </a>
+                                       title="T&eacute;l&eacute;chargez '<?= get_sub_field('title'); ?>'" download> </a>
                                     <p><?= get_sub_field('title'); ?></p>
                                     <img src="/wp-content/themes/vm/resources/svg/download.svg"
-                                         alt="Icône de téléchargement">
+                                         alt="Ic&ograve;ne de t&eacute;l&eacute;chargement">
                                 </li>
                             <?php endwhile; ?>
                         </ul>
