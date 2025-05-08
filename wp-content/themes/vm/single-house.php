@@ -31,18 +31,20 @@ get_header(); ?>
             </div>
         </section>
         <section class="gallery">
-            <h2 class="gallery__title"><?= get_field('gallery')['title'], false, false ?></h2>
+            <?php $gallery = get_field('gallery'); ?>
+            <h2 class="gallery__title"><?= get_field('gallery_title', false, false) ?></h2>
             <?php if (have_rows('gallery')): while (have_rows('gallery')): the_row();
-                $i = 1;?>
+                $i = 1; ?>
                 <?php if (have_rows('images')): ?>
                     <?php while (have_rows('images')): the_row();
-                         ?>
+                        ?>
                         <?= wp_get_attachment_image(get_sub_field('image'), 'medium', attr: "class=index_$i");
                         $i++ ?>
                     <?php endwhile; endif; endwhile; endif; ?>
         </section>
         <section class="map">
-            <h2 class="map__title"><?= get_field('map')['title'], false, false ?></h2>
+            <?php $map = get_field('map'); ?>
+            <h2 class="map__title"><?= get_field('map_title', false, false) ?></h2>
             <?= wp_get_attachment_image(get_field('map')['image'], 'large'); ?>
         </section>
         <section class="flexible_content other">

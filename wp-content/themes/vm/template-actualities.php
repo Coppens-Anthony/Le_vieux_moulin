@@ -15,7 +15,7 @@ get_header(); ?>
         </div>
     </section>
     <section class="actualities__all_actualities">
-        <h2 class="actualities__all_actualities__title"><?= get_field('title'), false, false ?></h2>
+        <h2 class="actualities__all_actualities__title"><?= get_field('title', false, false) ?></h2>
         <?php
         $actualities = new WP_Query([
             'post_type' => 'actuality',
