@@ -6,13 +6,12 @@
     <meta name="keywords"
           content="asbl, foyers, maisons, jeunes, vieux, moulin, association, soutenir, dons, confiance, respect, juridique, famille, entraide">
     <meta name="description"
-          content="<?= get_the_title() ?>">
-    <!--Changer la descirption-->
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="<?= get_bloginfo('description') ?>">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="/wp-content/themes/vm/resources/svg/little_logo.svg">
     <!--<link rel="stylesheet" href="<?php /*= dw_asset("css/style.css") */ ?>">-->
     <link rel="stylesheet" href="/wp-content/themes/vm/public/css/style.css">
-    <title>Le Vieux Moulin - <?= get_the_title() ?></title>
+    <title><?= get_bloginfo('title') ?> - <?= get_the_title() ?></title>
 </head>
 <body>
 <header class="header">
