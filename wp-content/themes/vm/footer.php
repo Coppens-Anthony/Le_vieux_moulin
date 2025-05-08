@@ -4,18 +4,17 @@
         <section class="footer__upPart__brand">
             <h3 class="sro">Suivez-nous</h3>
             <div class="footer__upPart__brand__logo">
-                <a href="<?= home_url(); ?>" class="footer__upPart__brand__logo__link" title="Vers la page d'accueil"
+                <a href="<?= home_url(); ?>" class="footer__upPart__brand__logo__link" title="Vers la page d&apos;accueil"
                    aria-label="Aller à la page d'accueil">Accueil</a>
                 <img src="/wp-content/themes/vm/resources/svg/little_logo_white.svg"
                      class="footer__upPart__brand__logo__img"
-                     alt="Logo minimisé du Vieux Moulin. Un 'V' dans le creux d'un 'M'. Tout cela en blanc">
+                     alt="Logo minimis&eacute; du Vieux Moulin. Un 'V' dans le creux d'un 'M'. Tout cela en blanc">
             </div>
             <small class="footer__upPart__brand__message">Un lieu, une mission : accueillir, accompagner,
                 transmettre</small>
             <div>
             <a href="https://www.facebook.com/SRGVM/?locale=fr_FR" class="footer__upPart__brand__facebook"
-               title="Découvrez notre page Facebook">f</a>
-            <!--Typo klavika basic bold pour le f Facebook-->
+               title="D&eacute;couvrez notre page Facebook">f</a>
             </div>
         </section>
         <section class="footer__upPart__infos">
@@ -40,11 +39,11 @@
         </section>
     </div>
     <section class="footer__downPart">
-        <h2 class="sro">Mentions légales</h2>
-        <small class="footer__downPart__text">© 2025 Le Vieux Moulin - Tous droits réservés.</small>
+        <h2 class="sro">Mentions l&eacute;gales</h2>
+        <small class="footer__downPart__text">© 2025 Le Vieux Moulin - Tous droits r&eacute;serv&eacute;s.</small>
         <small class="footer__downPart__legacy">
-            <a href="/mentions-legales" title="Se renseigner sur les mentions légales"
-               class="footer__downPart__legacy__link">Mentions légales</a>
+            <a href="/mentions-legales" title="Se renseigner sur les mentions l&eacute;gales"
+               class="footer__downPart__legacy__link">Mentions l&eacute;gales</a>
         </small>
     </section>
 </footer>

@@ -40,7 +40,7 @@
                     <li class="header__brand__nav__list__item">
                         <a href="<?= $link->href; ?>"
                            title="Vers la page <?= $link->label ?>"
-                           class="<?= $is_active ?> <?= is_front_page() ? 'home_page' : ''; ?>"
+                           class="<?= $is_active ?> <?= is_front_page() ? 'home_page' : ''; ?> hover_animation"
                         >
                             <?= $link->label; ?>
                         </a>

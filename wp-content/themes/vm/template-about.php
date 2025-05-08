@@ -76,7 +76,7 @@ get_header(); ?>
                 <?php $partner = get_field('partner') ?>
                 <h2 class="flexible_content__intro__title"><?= get_field('partner_title', false, false) ?></h2>
                 <a href="<?= get_field('partner')['link_to_page'] ?>"
-                   class="flexible_content__intro__link"
+                   class="flexible_content__intro__link hover_animation"
                    title="Vers la page contact"><?= get_field('partner')['link'] ?>
                 </a>
             </div>

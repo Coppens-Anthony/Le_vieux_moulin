@@ -129,7 +129,7 @@ function render_flexible_layout($layout_name, $id): void
 
                     if (get_sub_field('text')): ?>
                         <a href="<?= $href ?>"
-                           class="flexible_content__intro__link"
+                           class="flexible_content__intro__link hover_animation"
                            title="<?= get_sub_field('title') ?>"
                             <?= ($type === 'url') ? 'target="_blank" rel="noopener"' : ''; ?>>
                             <?= get_sub_field('text') ?>

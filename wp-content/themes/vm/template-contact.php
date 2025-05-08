@@ -27,7 +27,7 @@ get_header(); ?>
                     <ul class="contact__container__info__links_container__list">
                         <li class="contact__container__info__links_container__list__item">
                             <img src="/wp-content/themes/vm/resources/svg/mail.svg" alt="Ic&ograve;ne d&apos;enveloppe">
-                            <a class="contact__container__info__links_container__list__item__link"
+                            <a class="contact__container__info__links_container__list__item__link hover_animation"
                                title="Envoyez-nous un mail"
                                href="mailto:<?= get_field('mail') ?>">
                                 Mail - <?= get_field('mail') ?>
@@ -35,7 +35,7 @@ get_header(); ?>
                         </li>
                         <li class="contact__container__info__links_container__list__item">
                             <img src="/wp-content/themes/vm/resources/svg/phone.svg" alt="Ic&ograve;ne de t&eacute;l&eacute;phone">
-                            <a class="contact__container__info__links_container__list__item__link"
+                            <a class="contact__container__info__links_container__list__item__link hover_animation"
                                title="T&eacute;l&eacute;phonez-nous"
                                href="tel:<?= get_field('tel') ?>">
                                 T&eacute;l&eacute;phone - <?= get_field('tel') ?>
@@ -43,7 +43,7 @@ get_header(); ?>
                         </li>
                         <li class="contact__container__info__links_container__list__item">
                             <img src="/wp-content/themes/vm/resources/svg/download.svg" alt="Ic&ograve;ne de t&eacute;l&eacute;chargement">
-                            <a class="contact__container__info__links_container__list__item__link"
+                            <a class="contact__container__info__links_container__list__item__link hover_animation"
                                title="Vers les ressources t&eacute;l&eacute;chargeables"
                                href="<?= get_the_permalink(get_page_by_path('a-propos')->ID) . "#downloading" ?>">
                                 Ressources t&eacute;l&eacute;chargeables

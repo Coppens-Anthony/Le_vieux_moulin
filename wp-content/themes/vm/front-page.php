@@ -82,7 +82,7 @@ get_header();
             <div class="actualities__intro">
                 <h2 class="actualities__intro__title"><?= get_field('actualities_title', false, false) ?></h2>
                 <?php if (have_rows('actualities_link')): while (have_rows('actualities_link')): the_row(); ?>
-                    <a class="actualities__intro__link" href="<?= get_sub_field('actualities_link_page') ?>"
+                    <a class="actualities__intro__link hover_animation" href="<?= get_sub_field('actualities_link_page') ?>"
                        title="<?= get_sub_field('actualities_link_title') ?>"><?= get_sub_field('actualities_link_text') ?></a>
                 <?php endwhile; endif; ?>
             </div>
