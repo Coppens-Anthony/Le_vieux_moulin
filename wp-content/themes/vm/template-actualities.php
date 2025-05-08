@@ -7,7 +7,7 @@ Template Name: Actualities Page
 get_header(); ?>
 
 <main class="actualities">
-    <section class="intro">
+    <section class="intro animate">
         <h2 class="sro"><?= get_the_title() ?></h2>
         <p class="intro__text"><?= get_field('text') ?></p>
         <div class="intro__image_container">
@@ -15,7 +15,7 @@ get_header(); ?>
         </div>
     </section>
     <section class="actualities__all_actualities">
-        <h2 class="actualities__all_actualities__title"><?= get_field('title', false, false) ?></h2>
+        <h2 class="actualities__all_actualities__title animate"><?= get_field('title', false, false) ?></h2>
         <?php
         $actualities = new WP_Query([
             'post_type' => 'actuality',
@@ -26,7 +26,7 @@ get_header(); ?>
         if ($actualities->have_posts()): ?>
             <ul class="actualities__all_actualities__list">
                 <?php while ($actualities->have_posts()): $actualities->the_post(); ?>
-                    <li class="actualities__all_actualities__list__item">
+                    <li class="actualities__all_actualities__list__item animate">
                         <a href="<?= get_the_permalink() ?>"
                            title="D&eacute;couvrez l&apos;actualit&eacute; : '<?= get_field('title') ?>'">Vers l&apos;actualit&eacute;</a>
                         <article class="actualities__all_actualities__list__item__article">

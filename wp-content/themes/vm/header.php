@@ -11,6 +11,7 @@
     <link rel="icon" href="/wp-content/themes/vm/resources/svg/little_logo.svg">
     <!--<link rel="stylesheet" href="<?php /*= dw_asset("css/style.css") */ ?>">-->
     <link rel="stylesheet" href="/wp-content/themes/vm/public/css/style.css">
+    <script src="/wp-content/themes/vm/resources/js/main.js"></script>
     <title><?= get_bloginfo('title') ?> - <?= get_the_title() ?></title>
 </head>
 <body>

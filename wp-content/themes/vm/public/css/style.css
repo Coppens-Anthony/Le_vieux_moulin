@@ -1663,4 +1663,16 @@ li::marker {
   width: 100%;
 }
 
+.animate {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  transition-delay: 0.5s;
+  transform: translateY(5rem);
+}
+
+.scroll-animation {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /*# sourceMappingURL=style.css.map */

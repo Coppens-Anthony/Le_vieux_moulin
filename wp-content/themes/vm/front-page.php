@@ -28,7 +28,7 @@ get_header();
             <?= wp_get_attachment_image(get_field('background_image'), 'medium', attr: 'class=home__intro__image'); ?>
         </section>
         <section class="houses">
-            <h2 class="houses__title"><?= get_field('houses_title', false, false) ?></h2>
+            <h2 class="houses__title animate"><?= get_field('houses_title', false, false) ?></h2>
             <?php
             $houses = new WP_Query([
                 'post_type' => 'house',
@@ -39,7 +39,7 @@ get_header();
             if ($houses->have_posts()): ?>
                 <ul class="houses__list">
                     <?php while ($houses->have_posts()): $houses->the_post(); ?>
-                        <li class="houses__list__item">
+                        <li class="houses__list__item animate">
                             <article class="houses__list__item__article">
                                 <h3 class="sro"><?= get_the_title(); ?></h3>
                                 <div class="houses__list__item__article__content_Container">
@@ -58,7 +58,7 @@ get_header();
             <?php wp_reset_postdata(); ?>
         </section>
         <section class="values">
-            <div class="values__container">
+            <div class="values__container animate">
                 <h2 class="values__container__title"><?= get_field('values_title', false, false) ?></h2>
                 <?php if (have_rows('values')): ?>
                     <ul class="values__container__list">
@@ -78,7 +78,7 @@ get_header();
                 <?php endif; ?>
             </div>
         </section>
-        <section class="actualities">
+        <section class="animate actualities">
             <div class="actualities__intro">
                 <h2 class="actualities__intro__title"><?= get_field('actualities_title', false, false) ?></h2>
                 <?php if (have_rows('actualities_link')): while (have_rows('actualities_link')): the_row(); ?>

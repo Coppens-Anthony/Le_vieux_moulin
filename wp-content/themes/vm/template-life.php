@@ -7,7 +7,7 @@ Template Name: Life Page
 get_header(); ?>
 
     <main class="life">
-        <section class="intro">
+        <section class="intro animate">
             <h2 class="sro"><?= get_the_title() ?></h2>
             <p class="intro__text"><?= get_field('intro')['content'] ?></p>
             <div class="intro__image_container">
@@ -15,7 +15,7 @@ get_header(); ?>
             </div>
         </section>
         <section class="houses">
-            <h2 class="houses__title"><?= get_field('houses_title', false, false) ?></h2>
+            <h2 class="houses__title animate"><?= get_field('houses_title', false, false) ?></h2>
             <?php
             $houses = new WP_Query([
                 'post_type' => 'house',
@@ -26,7 +26,7 @@ get_header(); ?>
             if ($houses->have_posts()): ?>
                 <ul class="houses__list">
                     <?php while ($houses->have_posts()): $houses->the_post(); ?>
-                        <li class="houses__list__item">
+                        <li class="houses__list__item animate">
                             <article class="houses__list__item__article">
                                 <h3 class="sro"><?= get_the_title(); ?></h3>
                                 <div class="houses__list__item__article__content_Container">
@@ -46,7 +46,7 @@ get_header(); ?>
         </section>
         <?php render_flexible_layout('life', ''); ?>
         <?php render_flexible_layout('family', ''); ?>
-        <section class="flexible_content day">
+        <section class="flexible_content day animate">
             <?php $day = get_field('day') ?>
             <h2 class="flexible_content__intro__title"><?= get_field('day_title', false, false) ?></h2>
             <p class="day__content"><?= get_field('day')['desc'] ?></p>

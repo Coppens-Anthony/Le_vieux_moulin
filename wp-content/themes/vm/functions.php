@@ -119,7 +119,7 @@ function render_flexible_layout($layout_name, $id): void
         if (get_row_layout() !== $layout_name) continue;
 
         ?>
-        <section class="flexible_content" id="<?= $id ?>">
+        <section class="flexible_content animate" id="<?= $id ?>">
             <div class="flexible_content__intro">
                 <h2 class="flexible_content__intro__title"><?= get_sub_field('title', false, false) ?></h2>
 

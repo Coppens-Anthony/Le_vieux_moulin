@@ -6,7 +6,7 @@ Template Name: Contact Page
 
 get_header(); ?>
 
-    <main class="contact">
+    <main class="contact animate">
         <?php
         $errors = $_SESSION['contact_form_errors'] ?? [];
         unset($_SESSION['contact_form_errors']);

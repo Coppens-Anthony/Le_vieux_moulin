@@ -7,7 +7,7 @@ Template Name: About Page
 get_header(); ?>
 
     <main class="about">
-        <section class="intro">
+        <section class="animate intro">
             <h2 class="sro"><?= get_the_title() ?></h2>
             <p class="intro__text"><?= get_field('content') ?></p>
             <div class="intro__video_container">
@@ -17,7 +17,7 @@ get_header(); ?>
             </div>
         </section>
         <section class="values">
-            <div class="values__container">
+            <div class="values__container animate">
                 <h2 class="values__container__title"><?= get_field('values_title', false, false) ?></h2>
                 <?php if (have_rows('values')): ?>
                     <ul class="values__container__list">
@@ -37,7 +37,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </section>
-        <section class="history">
+        <section class="history animate">
             <?php $history =  get_field('history') ?>
             <h2 class="history__title"><?= get_field('history_title', false, false) ?></h2>
             <div class="history__content_container">
@@ -51,7 +51,7 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-        <section class="downloading" id="downloading">
+        <section class="downloading animate" id="downloading">
             <?php $downloading =  get_field('downloading') ?>
             <h2 class="downloading__title"><?= get_field('downloading_title', false, false) ?></h2>
             <div class="downloading__container">
@@ -71,7 +71,7 @@ get_header(); ?>
                     <?php endif; endwhile; endif; ?>
             </div>
         </section>
-        <section class="partner flexible_content">
+        <section class="partner animate flexible_content">
             <div class="flexible_content__intro">
                 <?php $partner = get_field('partner') ?>
                 <h2 class="flexible_content__intro__title"><?= get_field('partner_title', false, false) ?></h2>
