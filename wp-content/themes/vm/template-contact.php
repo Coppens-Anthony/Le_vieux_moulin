@@ -24,11 +24,12 @@ get_header(); ?>
                 <h3 class="sro"><?= get_the_title() ?></h3>
                 <p class="contact__container__info__text"><?= get_field('text') ?></p>
                 <div class="contact__container__info__links_container">
-                    <ul class="contact__container__info__links_container__list">
+                    <ul class="contact__container__info__links_container__list" itemtype="https://schema.org/Organization" itemscope>
                         <li class="contact__container__info__links_container__list__item">
                             <img src="/wp-content/themes/vm/resources/svg/mail.svg" alt="Ic&ograve;ne d&apos;enveloppe">
                             <a class="contact__container__info__links_container__list__item__link hover_animation"
                                title="Envoyez-nous un mail"
+                               itemprop="email"
                                href="mailto:<?= get_field('mail') ?>">
                                 Mail - <?= get_field('mail') ?>
                             </a>
@@ -37,6 +38,7 @@ get_header(); ?>
                             <img src="/wp-content/themes/vm/resources/svg/phone.svg" alt="Ic&ograve;ne de t&eacute;l&eacute;phone">
                             <a class="contact__container__info__links_container__list__item__link hover_animation"
                                title="T&eacute;l&eacute;phonez-nous"
+                               itemprop="telephone"
                                href="tel:<?= get_field('tel') ?>">
                                 T&eacute;l&eacute;phone - <?= get_field('tel') ?>
                             </a>

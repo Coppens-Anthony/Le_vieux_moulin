@@ -7,9 +7,9 @@ Template Name: About Page
 get_header(); ?>
 
     <main class="about">
-        <section class="animate intro">
+        <section class="animate intro" itemtype="https://schema.org/Thing" itemscope>
             <h2 class="sro"><?= get_the_title() ?></h2>
-            <p class="intro__text"><?= get_field('content') ?></p>
+            <p class="intro__text" itemprop="description"><?= get_field('content') ?></p>
             <div class="intro__video_container">
                 <video controls>
                     <source src="<?= get_field('video') ?>">
@@ -26,7 +26,7 @@ get_header(); ?>
                                 <article class="values__container__list__item__article">
                                     <div class="values__container__list__item__article__img_container">
                                         <img class="values__container__list__item__article__img_container__img"
-                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>">
+                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>" alt="Dessin repr&eacute;santant la valeur">
                                     </div>
                                     <h3 class="values__container__list__item__article__title"><?= get_sub_field('title') ?></h3>
                                     <p class="values__container__list__item__article__text"><?= get_sub_field('desc') ?></p>
@@ -84,9 +84,9 @@ get_header(); ?>
             <div class="partner__container">
                 <?php if (have_rows('partner')): while (have_rows('partner')): the_row(); ?>
                     <?php if (have_rows('list')): ?>
-                        <ul class="partner__container__list">
+                        <ul class="partner__container__list" itemtype="https://schema.org/Organization" itemscope>
                             <?php while (have_rows('list')): the_row(); ?>
-                                <li class="partner__container__list__item">
+                                <li class="partner__container__list__item" itemprop="sponsor">
                                     <a href="<?= get_sub_field('link') ?>"
                                        target="_blank" rel="noopener"
                                        title="Vers la page de <?= get_sub_field('name') ?>"><?= get_sub_field('name') ?></a>

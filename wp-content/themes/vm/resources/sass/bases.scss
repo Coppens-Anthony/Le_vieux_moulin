@@ -3,6 +3,7 @@ html {
   color: $blue;
   position: relative;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5 {
@@ -106,6 +107,7 @@ li::marker{
   &__text{
     font-size: $content;
     margin-bottom: $double;
+    line-height: 1.5rem;
     @media (min-width: $breakpoint-medium) {
       width: 48%;
       margin-bottom: 0;

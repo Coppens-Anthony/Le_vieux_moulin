@@ -16,13 +16,13 @@ get_header(); ?>
                     <ul class="values__container__list stats__list">
                         <?php while (have_rows('values')): the_row(); ?>
                             <li class="values__container__list__item stats__list__item">
-                                <article class="values__container__list__item__article">
+                                <article class="values__container__list__item__article" itemtype="https://schema.org/Organization" itemscope>
                                     <div class="values__container__list__item__article__img_container">
                                         <img class="values__container__list__item__article__img_container__img"
-                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>">
+                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>" alt="Dessin repr&eacute;sentant la fonction de la personne">
                                     </div>
-                                    <p class="values__container__list__item__article__title"><?= get_sub_field('desc') ?></p>
-                                    <h3 class="values__container__list__item__article__text"><?= get_sub_field('title') ?></h3>
+                                    <p itemprop="numberOfEmployees" class="values__container__list__item__article__title"><?= get_sub_field('desc') ?></p>
+                                    <h3 itemprop="employee" class="values__container__list__item__article__text"><?= get_sub_field('title') ?></h3>
                                 </article>
                             </li>
                         <?php endwhile; ?>

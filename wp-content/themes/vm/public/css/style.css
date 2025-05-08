@@ -1514,6 +1514,7 @@ html {
   color: #1A0051;
   position: relative;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5 {
@@ -1616,6 +1617,7 @@ li::marker {
 .intro__text {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  line-height: 1.5rem;
 }
 @media (min-width: 1000px) {
   .intro__text {

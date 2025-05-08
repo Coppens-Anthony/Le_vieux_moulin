@@ -18,11 +18,12 @@
 <header class="header">
     <h1 class="sro">Le Vieux Moulin</h1>
     <div class="header__brand">
-        <div class="header__brand__logo">
+        <div class="header__brand__logo" itemtype="https://schema.org/Organization" itemscope>
             <a href="<?= home_url() ?>" title="Retour &agrave; l&apos;accueil"
                class="header__brand__logo__link">Accueil</a>
-            <img src=" <?= is_front_page() ? '/wp-content/themes/vm/resources/svg/white_logo.svg' : '/wp-content/themes/vm/resources/svg/logo.svg' ?>"
+            <img src="<?= is_front_page() ? '/wp-content/themes/vm/resources/svg/white_logo.svg' : '/wp-content/themes/vm/resources/svg/logo.svg' ?>"
                  class="header__brand__logo__img"
+                 itemprop="logo"
                  alt="Logo du Vieux Moulin. Un 'V' dans le creux d'un 'M'. Avec une vague turquoise aux pieds qui représente un fleuve ainsi que des carrés oranges qui représentent la chaleur.">
         </div>
         <input type="checkbox" id="menuToggle">

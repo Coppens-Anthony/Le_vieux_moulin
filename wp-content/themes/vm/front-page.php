@@ -9,8 +9,8 @@ get_header();
 ?>
     <main class="home">
         <section class="home__intro">
-            <div class="home__intro__content">
-                <h2 class="home__intro__content__title"><?= get_field('title') ?></h2>
+            <div class="home__intro__content" itemtype="https://schema.org/Organization" itemscope>
+                <h2 class="home__intro__content__title" itemprop="legalName"><?= get_field('title') ?></h2>
                 <div class="home__intro__content__links">
                     <?php if (have_rows('intro_links')): ?>
                         <ul class="home__intro__content__links__list">
@@ -67,7 +67,7 @@ get_header();
                                 <article class="values__container__list__item__article">
                                     <div class="values__container__list__item__article__img_container">
                                         <img class="values__container__list__item__article__img_container__img"
-                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>">
+                                             src="<?= wp_get_attachment_url(get_sub_field('value_drawing')); ?>" alt="Dessin repr&eacute;santant la valeur">
                                     </div>
                                     <h3 class="values__container__list__item__article__title"><?= get_sub_field('title') ?></h3>
                                     <p class="values__container__list__item__article__text"><?= get_sub_field('desc') ?></p>

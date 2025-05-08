@@ -3,21 +3,22 @@
     <div class="footer__upPart">
         <section class="footer__upPart__brand">
             <h3 class="sro">Suivez-nous</h3>
-            <div class="footer__upPart__brand__logo">
+            <div class="footer__upPart__brand__logo" itemtype="https://schema.org/Organization" itemscope>
                 <a href="<?= home_url(); ?>" class="footer__upPart__brand__logo__link" title="Vers la page d&apos;accueil"
                    aria-label="Aller à la page d'accueil">Accueil</a>
                 <img src="/wp-content/themes/vm/resources/svg/little_logo_white.svg"
                      class="footer__upPart__brand__logo__img"
+                     itemprop="logo"
                      alt="Logo minimis&eacute; du Vieux Moulin. Un 'V' dans le creux d'un 'M'. Tout cela en blanc">
             </div>
-            <small class="footer__upPart__brand__message">Un lieu, une mission : accueillir, accompagner,
+            <small class="footer__upPart__brand__message" itemprop="slogan">Un lieu, une mission : accueillir, accompagner,
                 transmettre</small>
             <div>
             <a href="https://www.facebook.com/SRGVM/?locale=fr_FR" class="footer__upPart__brand__facebook"
                title="D&eacute;couvrez notre page Facebook">f</a>
             </div>
         </section>
-        <section class="footer__upPart__infos">
+        <section class="footer__upPart__infos" itemtype="https://schema.org/Organization" itemscope>
             <h3 class="sro">Informations de pied de page</h3>
             <?php
             get_sidebar('location');
