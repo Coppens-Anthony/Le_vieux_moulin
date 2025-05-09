@@ -1,0 +1,38 @@
+.legacies {
+  width: $small-width;
+  margin: $triple auto;
+  display: flex;
+  flex-direction: column;
+  gap: $double;
+  @media (min-width: $breakpoint-medium) {
+    width: $large-width;
+    margin: $quintuple auto;
+  }
+
+  &__article {
+    &__title {
+      font-size: $mobileTitle;
+      line-height: 2rem;
+      margin-bottom: $basic;
+      @media (min-width: $breakpoint-medium) {
+        font-size: $title;
+        margin-bottom: 0;
+      }
+    }
+
+    &__content {
+      margin-top: $double;
+      font-size: $content;
+      display: flex;
+      flex-direction: column;
+      gap: $basic;
+      @media (min-width: $breakpoint-medium) {
+        font-size: $core;
+        margin-top: $quadruple;
+      }
+      p{
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
