@@ -1,13 +1,15 @@
 html {
   font-family: $nunito-regular;
   color: $blue;
-  position: relative;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  position: relative;
+  height: 100%;
 }
+
 
 h1, h2, h3, h4, h5 {
   font-family: $fredoka-regular;
+
   strong {
     position: relative;
     font-weight: 400;
@@ -21,7 +23,7 @@ h1, h2, h3, h4, h5 {
       height: 50%;
       background-image: url("/wp-content/themes/vm/resources/svg/markup.svg");
       background-size: 100% 100%;
-      @media (min-width: $breakpoint-tablet){
+      @media (min-width: $breakpoint-tablet) {
         top: $markup;
         height: 100%;
       }
@@ -47,7 +49,7 @@ a {
 }
 
 .button {
-  padding: $basic $medium;
+  padding: $basic;
   background-color: $orange;
   border-radius: 1.2em 0 1.2em 0;
   color: $blue;
@@ -55,10 +57,15 @@ a {
   cursor: pointer;
   border: 1px solid $orange;
   transition: 0.3s;
-  &:hover{
+
+  &:hover {
     border: 1px solid $blue;
     transition: 0.3s;
     border-radius: 0 1.2em 0 1.2em;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    padding: $basic $medium;
   }
 }
 
@@ -69,7 +76,8 @@ small {
 .current_page {
   color: $orange !important;
   font-family: $fredoka-semiBold;
-  &:hover:after{
+
+  &:hover:after {
     content: none;
   }
 }
@@ -85,11 +93,11 @@ small {
   }
 }
 
-img, video{
+img, video {
   border: 1px solid $blue;
 }
 
-li::marker{
+li::marker {
   content: none;
 }
 
@@ -104,7 +112,7 @@ li::marker{
     align-items: center;
   }
 
-  &__text{
+  &__text {
     font-size: $content;
     margin-bottom: $double;
     line-height: 1.5rem;
@@ -113,11 +121,13 @@ li::marker{
       margin-bottom: 0;
     }
   }
-  &__image_container{
+
+  &__image_container {
     @media (min-width: $breakpoint-medium) {
       width: 48%;
     }
-    img{
+
+    img {
       width: 100%;
       height: auto;
       aspect-ratio: 8 / 5;
@@ -125,11 +135,13 @@ li::marker{
       border-radius: 2em 0 2em 0;
     }
   }
-  &__video_container{
+
+  &__video_container {
     @media (min-width: $breakpoint-medium) {
       width: 48%;
     }
-    video{
+
+    video {
       width: 100%;
       border-radius: 2em 0 2em 0;
     }
@@ -162,7 +174,14 @@ li::marker{
   transition-delay: 0.5s;
   transform: translateY(5rem);
 }
+
 .scroll-animation {
   transform: translateY(0);
   opacity: 1;
+}
+.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }

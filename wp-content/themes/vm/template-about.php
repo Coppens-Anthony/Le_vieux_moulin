@@ -37,10 +37,10 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </section>
-        <section class="history animate">
+        <section class="history">
             <?php $history =  get_field('history') ?>
-            <h2 class="history__title"><?= get_field('history_title', false, false) ?></h2>
-            <div class="history__content_container">
+            <h2 class="history__title animate"><?= get_field('history_title', false, false) ?></h2>
+            <div class="history__content_container animate">
                 <div class="history__content_container__content">
                     <?= get_field('history')['content'] ?>
                 </div>
@@ -51,10 +51,10 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-        <section class="downloading animate" id="downloading">
+        <section class="downloading" id="downloading">
             <?php $downloading =  get_field('downloading') ?>
-            <h2 class="downloading__title"><?= get_field('downloading_title', false, false) ?></h2>
-            <div class="downloading__container">
+            <h2 class="downloading__title animate"><?= get_field('downloading_title', false, false) ?></h2>
+            <div class="downloading__container animate">
                 <?php if (have_rows('downloading')): while (have_rows('downloading')): the_row(); ?>
                     <?php if (have_rows('list')): ?>
                         <ul class="downloading__container__list">
@@ -71,8 +71,8 @@ get_header(); ?>
                     <?php endif; endwhile; endif; ?>
             </div>
         </section>
-        <section class="partner animate flexible_content">
-            <div class="flexible_content__intro">
+        <section class="partner flexible_content">
+            <div class="flexible_content__intro animate">
                 <?php $partner = get_field('partner') ?>
                 <h2 class="flexible_content__intro__title"><?= get_field('partner_title', false, false) ?></h2>
                 <a href="<?= get_field('partner')['link_to_page'] ?>"
@@ -80,8 +80,8 @@ get_header(); ?>
                    title="Vers la page contact"><?= get_field('partner')['link'] ?>
                 </a>
             </div>
-            <p class="partner__content"><?= get_field('partner')['content'] ?></p>
-            <div class="partner__container">
+            <p class="partner__content animate"><?= get_field('partner')['content'] ?></p>
+            <div class="partner__container animate">
                 <?php if (have_rows('partner')): while (have_rows('partner')): the_row(); ?>
                     <?php if (have_rows('list')): ?>
                         <ul class="partner__container__list" itemtype="https://schema.org/Organization" itemscope>

@@ -116,11 +116,10 @@ function render_flexible_layout($layout_name, $id): void
     if (!have_rows('flexible_content')) return;
 
     while (have_rows('flexible_content')): the_row();
-        if (get_row_layout() !== $layout_name) continue;
+        if (get_row_layout() !== $layout_name) continue; ?>
 
-        ?>
-        <section class="flexible_content animate" id="<?= $id ?>">
-            <div class="flexible_content__intro">
+        <section class="flexible_content" id="<?= $id ?>">
+            <div class="flexible_content__intro animate">
                 <h2 class="flexible_content__intro__title"><?= get_sub_field('title', false, false) ?></h2>
 
                 <?php if (have_rows('link')): while (have_rows('link')): the_row();
@@ -139,11 +138,11 @@ function render_flexible_layout($layout_name, $id): void
 
             <div class="flexible_content__content_container">
                 <div class="flexible_content__content_container__content">
-                    <p class="flexible_content__content_container__content__text"><?= get_sub_field('content') ?></p>
+                    <p class="flexible_content__content_container__content__text animate"><?= get_sub_field('content') ?></p>
 
                     <?php if (get_sub_field('button_title')): ?>
-                        <label for="modal" title="Vers la boîte de don"
-                               class="flexible_content__content_container__content__label button"><?= get_sub_field('button_title') ?></label>
+                        <label for="modal" title="Vers la bo&icirc;te de don"
+                               class="flexible_content__content_container__content__label button animate"><?= get_sub_field('button_title') ?></label>
                         <input type="checkbox" id="modal" name="modal" class="modal_input">
 
                         <div class="modal_overlay">
@@ -165,7 +164,7 @@ function render_flexible_layout($layout_name, $id): void
                     <?php endif; ?>
                 </div>
 
-                <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>
+                <?= wp_get_attachment_image(get_sub_field('image'), 'medium', attr: "class=animate"); ?>
             </div>
         </section>
     <?php

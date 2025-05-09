@@ -46,11 +46,11 @@ get_header(); ?>
         </section>
         <?php render_flexible_layout('life', ''); ?>
         <?php render_flexible_layout('family', ''); ?>
-        <section class="flexible_content day animate">
+        <section class="flexible_content day">
             <?php $day = get_field('day') ?>
-            <h2 class="flexible_content__intro__title"><?= get_field('day_title', false, false) ?></h2>
-            <p class="day__content"><?= get_field('day')['desc'] ?></p>
-            <div class="day__container">
+            <h2 class="flexible_content__intro__title animate"><?= get_field('day_title', false, false) ?></h2>
+            <p class="day__content animate"><?= get_field('day')['desc'] ?></p>
+            <div class="day__container animate">
                 <?php if (have_rows('day')): while (have_rows('day')): the_row(); ?>
                     <?php if (have_rows('list')): ?>
                         <ul class="day__container__list">

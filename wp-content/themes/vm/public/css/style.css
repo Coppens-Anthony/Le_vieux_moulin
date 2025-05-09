@@ -299,7 +299,12 @@ input {
   width: fit-content;
 }
 .header__brand__nav__list__item:last-child {
-  margin: 0;
+  margin: auto;
+}
+@media (min-width: 1000px) {
+  .header__brand__nav__list__item:last-child {
+    margin: 0;
+  }
 }
 .header__brand__nav__list__item:last-child a {
   display: block;
@@ -408,6 +413,7 @@ input:checked ~ .header__brand__nav {
   z-index: -1;
   overflow: hidden;
   object-fit: cover;
+  border: none;
 }
 .home .actualities {
   width: calc(100% - 64px);
@@ -1553,9 +1559,9 @@ input:checked ~ .header__brand__nav {
 html {
   font-family: "Nunito-Regular", "Rubik", "Segoe UI", "Helvetica Neue", sans-serif;
   color: #1A0051;
-  position: relative;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  position: relative;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -1599,7 +1605,7 @@ a {
 }
 
 .button {
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   background-color: #FFB240;
   border-radius: 1.2em 0 1.2em 0;
   color: #1A0051;
@@ -1612,6 +1618,11 @@ a {
   border: 1px solid #1A0051;
   transition: 0.3s;
   border-radius: 0 1.2em 0 1.2em;
+}
+@media (min-width: 1000px) {
+  .button {
+    padding: 1rem 1.5rem;
+  }
 }
 
 small {
@@ -1716,6 +1727,13 @@ li::marker {
 .scroll-animation {
   transform: translateY(0);
   opacity: 1;
+}
+
+.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -78,8 +78,8 @@ get_header();
                 <?php endif; ?>
             </div>
         </section>
-        <section class="animate actualities">
-            <div class="actualities__intro">
+        <section class="actualities">
+            <div class="actualities__intro animate">
                 <h2 class="actualities__intro__title"><?= get_field('actualities_title', false, false) ?></h2>
                 <?php if (have_rows('actualities_link')): while (have_rows('actualities_link')): the_row(); ?>
                     <a class="actualities__intro__link hover_animation" href="<?= get_sub_field('actualities_link_page') ?>"
@@ -97,7 +97,7 @@ get_header();
             if ($actualities->have_posts()): ?>
                 <ul class="actualities__list">
                     <?php while ($actualities->have_posts()): $actualities->the_post(); ?>
-                        <li class="actualities__list__item">
+                        <li class="actualities__list__item animate">
                             <a href="<?= get_the_permalink() ?>"
                                title="D&eacute;couvrez l'actualit&eacute; : '<?= get_field('title') ?>'">Vers l'actualit&eacute;</a>
                             <article class="actualities__list__item__article">
@@ -111,7 +111,7 @@ get_header();
             <?php wp_reset_postdata(); ?>
         </section>
         <?php render_flexible_layout('host', ''); ?>
-        <?php render_flexible_layout('donate', ''); ?>
+        <?php render_flexible_layout('donate', 'donate'); ?>
 
     </main>
 <?php
