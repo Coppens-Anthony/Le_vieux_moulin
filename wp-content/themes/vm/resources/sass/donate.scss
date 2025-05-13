@@ -1,17 +1,19 @@
 .donate {
-  &__follow{
+  &__follow {
     width: $small-width;
     margin: $triple auto;
     @media (min-width: $breakpoint-medium) {
       width: $large-width;
       margin: $quintuple auto;
     }
-    &__intro{
+
+    &__intro {
       @media (min-width: $breakpoint-medium) {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+
       &__title {
         font-size: $mobileTitle;
         line-height: 2rem;
@@ -22,24 +24,28 @@
         }
       }
     }
-    &__list{
+
+    &__list {
       display: flex;
       flex-direction: column;
       gap: $basic;
       margin-top: $double;
       @media (min-width: $breakpoint-medium) {
         margin-top: $quadruple;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $double;
       }
-      &__item{
-        &__article{
-          img{
+
+      &__item {
+        &__article {
+          img {
             width: 100%;
             height: 100%;
             border-radius: 1.5em 0 1.5em 0;
           }
-          &__title{
+
+          &__title {
             text-align: center;
             margin-top: $small;
             font-size: $core;

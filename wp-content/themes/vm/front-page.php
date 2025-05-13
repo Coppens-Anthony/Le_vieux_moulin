@@ -25,7 +25,7 @@ get_header();
                     <?php endif; ?>
                 </div>
             </div>
-            <?= wp_get_attachment_image(get_field('background_image'), 'medium', attr: 'class=home__intro__image'); ?>
+            <?= wp_get_attachment_image(get_field('background_image'), 'Medium_large', attr: 'class=home__intro__image'); ?>
         </section>
         <section class="houses">
             <h2 class="houses__title animate"><?= get_field('houses_title', false, false) ?></h2>
@@ -48,7 +48,7 @@ get_header();
                                        class="houses__list__item__article__content_Container__link button"><?= get_the_title(); ?></a>
                                 </div>
                                 <div class="houses__list__item__article__image">
-                                    <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                                    <?= wp_get_attachment_image(get_field('image'), 'mid'); ?>
                                 </div>
                             </article>
                         </li>

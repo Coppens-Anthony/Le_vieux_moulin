@@ -12,6 +12,10 @@
       position: absolute;
       top: 50vh;
       left: 50vw;
+      width: 100%;
+      @media (min-width: $breakpoint-medium) {
+        width: 50%;
+      }
 
       &__title {
         color: $white;
@@ -20,12 +24,8 @@
 
       &__links__list {
         display: flex;
-        flex-direction: column;
         justify-content: space-evenly;
         margin-top: $double;
-        @media (min-width: $breakpoint-medium) {
-          flex-direction: row;
-        }
 
         &__item {
           margin-top: $triple;
@@ -87,8 +87,9 @@
       margin-top: $double;
       @media (min-width: $breakpoint-medium) {
         margin-top: $quadruple;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $double;
       }
 
       &__item {

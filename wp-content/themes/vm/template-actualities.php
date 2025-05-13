@@ -11,7 +11,7 @@ get_header(); ?>
         <h2 class="sro"><?= get_the_title() ?></h2>
         <p class="intro__text"><?= get_field('text') ?></p>
         <div class="intro__image_container">
-            <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+            <?= wp_get_attachment_image(get_field('image'), 'mid'); ?>
         </div>
     </section>
     <section class="actualities__all_actualities">
@@ -30,7 +30,7 @@ get_header(); ?>
                         <a href="<?= get_the_permalink() ?>"
                            title="D&eacute;couvrez l&apos;actualit&eacute; : '<?= get_field('title') ?>'">Vers l&apos;actualit&eacute;</a>
                         <article class="actualities__all_actualities__list__item__article">
-                            <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                            <?= wp_get_attachment_image(get_field('image'), 'mid'); ?>
                             <h3 class="actualities__all_actualities__list__item__article__title"><?= get_field('title') ?></h3>
                         </article>
                     </li>

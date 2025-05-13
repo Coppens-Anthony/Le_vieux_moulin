@@ -83,6 +83,10 @@ register_sidebar([
     'after_title' => '</h4>',
 ]);
 
+
+add_image_size('mid', 500, 500);
+
+
 register_nav_menu('footer', 'Le menu de navigation de fin de page');
 register_nav_menu('header', 'Le menu de navigation de haut de page');
 
@@ -164,7 +168,7 @@ function render_flexible_layout($layout_name, $id): void
                     <?php endif; ?>
                 </div>
 
-                <?= wp_get_attachment_image(get_sub_field('image'), 'medium', attr: "class=animate"); ?>
+                <?= wp_get_attachment_image(get_sub_field('image'), 'mid', attr: "class=animate"); ?>
             </div>
         </section>
     <?php

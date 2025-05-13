@@ -6,7 +6,7 @@ get_header(); ?>
             <h2 class="sro"><?= get_the_title() ?></h2>
             <p class="intro__text"><?= get_field('intro')['content'] ?></p>
             <div class="intro__image_container">
-                <?= wp_get_attachment_image(get_field('intro')['image'], 'medium'); ?>
+                <?= wp_get_attachment_image(get_field('intro')['image'], 'mid'); ?>
             </div>
         </section>
         <section class="values stats">
@@ -38,7 +38,7 @@ get_header(); ?>
                 <?php if (have_rows('images')): ?>
                     <?php while (have_rows('images')): the_row();
                         ?>
-                        <?= wp_get_attachment_image(get_sub_field('image'), 'medium', attr: "class=index_$i");
+                        <?= wp_get_attachment_image(get_sub_field('image'), 'mid', attr: "class=index_$i");
                         $i++ ?>
                     <?php endwhile; endif; endwhile; endif; ?>
         </section>
@@ -66,7 +66,7 @@ get_header(); ?>
                             <?= get_the_title($other_id) ?>
                         </a>
                     </div>
-                    <?= wp_get_attachment_image(get_field('image', $other_id), 'medium'); ?>
+                    <?= wp_get_attachment_image(get_field('image', $other_id), 'mid'); ?>
                 </div>
             <?php endwhile;
                 wp_reset_postdata();

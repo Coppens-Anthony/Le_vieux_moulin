@@ -11,7 +11,7 @@ get_header(); ?>
             <h2 class="sro"><?= get_the_title() ?></h2>
             <p class="intro__text"><?= get_field('intro')['content'] ?></p>
             <div class="intro__image_container">
-                <?= wp_get_attachment_image(get_field('intro')['image'], 'medium'); ?>
+                <?= wp_get_attachment_image(get_field('intro')['image'], 'mid'); ?>
             </div>
         </section>
         <section class="houses">
@@ -35,7 +35,7 @@ get_header(); ?>
                                        class="houses__list__item__article__content_Container__link button"><?= get_the_title(); ?></a>
                                 </div>
                                 <div class="houses__list__item__article__image">
-                                    <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                                    <?= wp_get_attachment_image(get_field('image'), 'mid'); ?>
                                 </div>
                             </article>
                         </li>
@@ -62,7 +62,7 @@ get_header(); ?>
                             <?php endwhile; ?>
                         </ul>
                     <?php endif; endwhile; endif; ?>
-                <?= wp_get_attachment_image(get_field('day')['image'], 'medium', attr: 'class=day__container__img'); ?>
+                <?= wp_get_attachment_image(get_field('day')['image'], 'mid', attr: 'class=day__container__img'); ?>
             </div>
         </section>
     </main>

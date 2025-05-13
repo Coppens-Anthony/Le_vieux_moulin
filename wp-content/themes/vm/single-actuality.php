@@ -3,7 +3,7 @@
         <section class="single_actuality__content">
             <h2 class="single_actuality__content__title animate"><?= get_field('title') ?></h2>
             <div class="single_actuality__content__image_container animate">
-                <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                <?= wp_get_attachment_image(get_field('image'), 'large'); ?>
             </div>
             <div class="single_actuality__content__description animate">
                 <?= get_field('description') ?>
@@ -27,7 +27,7 @@
                             <a href="<?= get_the_permalink() ?>"
                                title="D&eacute;couvrez l&apos;actualit&eacute; : '<?= get_the_title() ?>'">Vers l&apos;actualit&eacute;</a>
                             <article class="actualities__all_actualities__list__item__article">
-                                <?= wp_get_attachment_image(get_field('image'), 'medium'); ?>
+                                <?= wp_get_attachment_image(get_field('image'), 'mid'); ?>
                                 <h3 class="actualities__all_actualities__list__item__article__title"><?= get_field('title') ?></h3>
                             </article>
                         </li>

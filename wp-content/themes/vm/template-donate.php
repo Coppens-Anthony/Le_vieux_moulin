@@ -10,7 +10,7 @@ get_header(); ?>
             <h2 class="sro"><?= get_the_title() ?></h2>
             <p class="intro__text"><?= get_field('intro')['text'] ?></p>
             <div class="intro__image_container">
-                <?= wp_get_attachment_image(get_field('intro')['image'], 'medium'); ?>
+                <?= wp_get_attachment_image(get_field('intro')['image'], 'mid'); ?>
             </div>
         </section>
         <section class="donate__follow">
@@ -23,7 +23,7 @@ get_header(); ?>
                     <?php while (have_rows('donation_projects')): the_row(); ?>
                         <li class="donate__follow__list__item animate">
                             <article class="donate__follow__list__item__article">
-                                <?= wp_get_attachment_image(get_sub_field('image'), 'medium'); ?>
+                                <?= wp_get_attachment_image(get_sub_field('image'), 'mid'); ?>
                                 <h3 class="donate__follow__list__item__article__title"><?= get_sub_field('title'); ?></h3>
                             </article>
                         </li>

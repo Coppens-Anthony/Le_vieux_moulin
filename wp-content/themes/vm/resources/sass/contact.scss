@@ -19,6 +19,7 @@
   &__container {
     @media (min-width: $breakpoint-medium) {
       display: flex;
+      justify-content: space-between;
     }
 
     &__info {
