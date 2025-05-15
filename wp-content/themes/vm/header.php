@@ -9,8 +9,7 @@
           content="<?= get_bloginfo('description') ?>">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" href="/wp-content/themes/vm/resources/svg/little_logo.svg">
-    <!--<link rel="stylesheet" href="<?php /* dw_asset("css/style.css") */ ?>">-->
-    <link rel="stylesheet" href="/wp-content/themes/vm/public/css/style.css">
+    <link rel="stylesheet" href="/wp-content/themes/vm/public/css/style.css"">
     <script src="/wp-content/themes/vm/resources/js/main.js"></script>
     <title><?= get_bloginfo('title') ?> - <?= get_the_title() ?></title>
 </head>
@@ -47,8 +46,8 @@
                 <rect x="211.323" y="43.2865" width="10.5577" height="21.1154" rx="2" transform="rotate(49.2886 211.323 43.2865)" fill="#FFB240"/>
                 <rect x="226.721" y="62.2903" width="10.5577" height="21.1154" rx="2" transform="rotate(62.5284 226.721 62.2903)" fill="#FFB240"/>
                 <rect x="232.397" y="85.3481" width="10.5577" height="21.1154" rx="2" transform="rotate(72.3371 232.397 85.3481)" fill="#FFB240"/>
-                <path class="blue" d="M18.0579 129H0L18.0579 0H28.5916L72 98L123.897 0H137.942L156 129H127.408L118.881 43L77.7492 123H66.2122L27.0868 44.5L18.0579 129Z" fill="#FFFFF0"/>
-                <path class="blue" d="M48.1543 0H35.1125L72 84.5L116 0H102.83L72 59.5L48.1543 0Z" fill="#FFFFF0"/>
+                <path class="blue" d="M18.0579 129H0L18.0579 0H28.5916L72 98L123.897 0H137.942L156 129H127.408L118.881 43L77.7492 123H66.2122L27.0868 44.5L18.0579 129Z" fill="<?= is_front_page() ? '#FFFFF0' : '#1A0051'; ?>"/>
+                <path class="blue" d="M48.1543 0H35.1125L72 84.5L116 0H102.83L72 59.5L48.1543 0Z" fill="<?= is_front_page() ? '#FFFFF0' : '#1A0051'; ?>"/>
                 <path d="M69 109.136C39.4 109.936 15.3333 121.803 7 127.636C22.3333 121.136 43.5 110.5 81 123.636C105.163 132.101 135.667 128.136 149 122.636C142.833 122.97 126.2 122.037 109 115.637C91.8 109.237 75.1667 108.637 69 109.136Z" fill="#8AF5E1"/>
             </svg>
         </div>

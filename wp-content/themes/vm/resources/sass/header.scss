@@ -120,7 +120,6 @@
       }
     }
 
-
     @media (min-width: $breakpoint-medium) {
       &__logo {
         width: 10%;
@@ -139,7 +138,11 @@
         height: auto;
 
         &__list {
+          transform-origin: unset;
+          transform: none;
+          position: unset;
           display: flex;
+          flex-direction: row;
           justify-content: space-between;
           align-items: center;
           padding-top: 0;
