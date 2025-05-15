@@ -71,18 +71,21 @@
       text-align: center;
 
       &__list {
-        padding-top: $huge;
+        transform-origin: center;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%;
 
         &__item {
-          margin: auto auto $basic;
+          margin: 0 auto;
           width: fit-content;
 
           &:last-child {
-            margin: auto;
-            @media (min-width: $breakpoint-medium) {
-              margin: 0;
-            }
-
             a {
               display: block;
               padding: $basic $medium;

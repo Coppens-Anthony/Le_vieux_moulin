@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }, observerOptions);
 
     animatables.forEach((animatable) => observer.observe(animatable));
+
+
 });
 
 
@@ -42,3 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const checkbox = document.getElementById('menuToggle');
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            document.body.classList.add('nav-open');
+        } else {
+            document.body.classList.remove('nav-open');
+        }
+    });
+});

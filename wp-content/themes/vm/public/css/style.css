@@ -295,19 +295,19 @@ input {
   text-align: center;
 }
 .header__brand__nav__list {
-  padding-top: 8.25rem;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
 }
 .header__brand__nav__list__item {
-  margin: auto auto 1rem;
+  margin: 0 auto;
   width: fit-content;
-}
-.header__brand__nav__list__item:last-child {
-  margin: auto;
-}
-@media (min-width: 1000px) {
-  .header__brand__nav__list__item:last-child {
-    margin: 0;
-  }
 }
 .header__brand__nav__list__item:last-child a {
   display: block;
@@ -1585,6 +1585,11 @@ html {
     width: 60%;
     margin: auto;
   }
+}
+
+.nav-open {
+  overflow: hidden;
+  height: 100vh;
 }
 
 h1, h2, h3, h4, h5 {
