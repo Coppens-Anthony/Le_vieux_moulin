@@ -11,9 +11,13 @@
       width: 30%;
       z-index: 1002;
 
-      &__img {
+      svg {
         width: 100%;
-        border: none;
+        height: auto;
+
+        .blue {
+          transition: 1s;
+        }
       }
 
       &__link {
@@ -113,16 +117,6 @@
       }
     }
 
-    input:checked ~ &__nav {
-      visibility: visible;
-      right: 0;
-      display: block;
-    }
-
-    input:checked ~ label span {
-      background-color: $blue;
-      transition: 1s;
-    }
 
     @media (min-width: $breakpoint-medium) {
       &__logo {
@@ -156,6 +150,22 @@
           }
         }
       }
+    }
+
+    input:checked ~ &__logo svg .blue {
+      fill: $blue;
+      transition: 1s;
+    }
+
+    input:checked ~ &__nav {
+      visibility: visible;
+      right: 0;
+      display: block;
+    }
+
+    input:checked ~ label span {
+      background-color: $blue;
+      transition: 1s;
     }
   }
 }

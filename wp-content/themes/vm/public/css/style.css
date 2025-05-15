@@ -243,9 +243,12 @@ input {
   width: 30%;
   z-index: 1002;
 }
-.header__brand__logo__img {
+.header__brand__logo svg {
   width: 100%;
-  border: none;
+  height: auto;
+}
+.header__brand__logo svg .blue {
+  transition: 1s;
 }
 .header__brand__logo__link {
   position: absolute;
@@ -330,15 +333,6 @@ input {
   color: #1A0051;
   font-size: 1.3rem;
 }
-input:checked ~ .header__brand__nav {
-  visibility: visible;
-  right: 0;
-  display: block;
-}
-.header__brand input:checked ~ label span {
-  background-color: #1A0051;
-  transition: 1s;
-}
 @media (min-width: 1000px) {
   .header__brand__logo {
     width: 10%;
@@ -368,6 +362,19 @@ input:checked ~ .header__brand__nav {
   .header__brand__nav__list__item a {
     padding: 0;
   }
+}
+input:checked ~ .header__brand__logo svg .blue {
+  fill: #1A0051;
+  transition: 1s;
+}
+input:checked ~ .header__brand__nav {
+  visibility: visible;
+  right: 0;
+  display: block;
+}
+.header__brand input:checked ~ label span {
+  background-color: #1A0051;
+  transition: 1s;
 }
 
 .home__intro {
