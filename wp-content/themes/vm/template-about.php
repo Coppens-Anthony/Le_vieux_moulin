@@ -61,7 +61,7 @@ get_header(); ?>
                             <?php while (have_rows('list')): the_row(); ?>
                                 <li class="downloading__container__list__item">
                                     <a href="<?= get_sub_field('file'); ?>"
-                                       title="T&eacute;l&eacute;chargez '<?= get_sub_field('title'); ?>'" download> </a>
+                                       title="T&eacute;l&eacute;chargez '<?= get_sub_field('title'); ?>'" download></a>
                                     <p><?= get_sub_field('title'); ?></p>
                                     <img src="/wp-content/themes/vm/resources/svg/download.svg"
                                          alt="Ic&ograve;ne de t&eacute;l&eacute;chargement">

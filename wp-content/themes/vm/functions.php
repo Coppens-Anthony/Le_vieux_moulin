@@ -211,4 +211,55 @@ function dw_handle_contact_form()
     return $form->handle($_POST);
 }
 
+
+function dashboard() {
+    wp_add_dashboard_widget(
+        'instructions_client', // ID unique
+        'Bienvenue ! Consignes à suivre', // Titre du widget
+        'update_content_instruction' // Fonction de contenu
+    );
+}
+
+function update_content_instruction() {
+    echo '<p>Bienvenue dans l’interface d’administration. Voici quelques consignes :</p>';
+    echo '<ul>
+            <li>Ne touchez pas aux réglages du thème.</li>
+            <li>Pour modifier les éléments spécifiques à une page, allez dans "Pages" et sélectionnez la page en question.</li>
+            <li>Pour mettre à jour vos actualités, allez dans "Actualités".</li>
+            <li>Pour mettre à jour les informations concernant les foyers, allez dans "Foyers".</li>
+            <li>Vous pouvez consulter l’historique des messages envoyés via le formulaire de contact dans la section "Messages de contact".</li>
+            <li>En cas de doute, vous pourrez me contacter à l&apos;adresse <a href="mailto:anthonycoppens04@gmail.com">anthonycoppens04@gmail.com</a>.</li>
+          </ul>';
+}
+
+function upload() {
+    wp_add_dashboard_widget(
+        'upload_instructions', // <-- ID différent ici !
+        'Consignes pour la mise à jour en ligne', // Titre du widget
+        'upload_instruction' // Fonction de contenu
+    );
+}
+
+function upload_instruction() {
+    echo '<p>Voici les étapes pour mettre à jour le site :</p>';
+    echo '<ul>
+            <li>Allez dans "All-In-One WP Migration" puis dans l&apos;option "Export".</li>
+            <li>Sélectionner "File" comme méthode d&apos;export (cela va télécharger un fichier au format .wpress).</li>
+            <li>Ouvrez FileZilla en vous connactant avec les informations de votre site.</li>
+            <li>Aller dans le dossier "wp-content" et ensuite dans le "ai1wm-backups".</li>
+            <li>Remplacez le fichier wpress par celui que vous avez téléchargez.</li>
+            <li>Rendez-vous sur votre site en ligne.</li>
+            <li>Ajouter "/wp-admin" dans votre url pour accéder à Wordpress.</li>
+            <li>Connectez-vous.</li>
+            <li>Allez dans "All-In-One WP Migration" puis dans l&apos;option "Backups".</li>
+            <li>Cliquez sur les 3 points du fichier et sélectionnez "Restaurer".</li>
+          </ul>
+            <p>Et voilà, votre site vient d&apos;être mis à jour&nbsp;!</p>';
+}
+
+add_action('wp_dashboard_setup', 'dashboard');
+add_action('wp_dashboard_setup', 'upload');
+
+
+
 session_write_close();
