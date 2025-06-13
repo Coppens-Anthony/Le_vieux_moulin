@@ -6,7 +6,7 @@
     <p class="page404__desc">
         La page à la quelle vous essayez d'accéder n'existe pas !
     </p>
-    <a class="button" href="<?= home_url() ?>"><span>Retourner à l'accueil</span></a>
+    <a class="button" href="<?= home_url() ?>" title="Vers la page d'accueil"><span>Retourner à l'accueil</span></a>
 </section>
 
 
