@@ -1190,37 +1190,6 @@ input:checked ~ .header__brand__nav {
   line-height: 1.5rem;
 }
 
-.page404 {
-  width: calc(100% - 64px);
-  margin: 3rem auto;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .page404 {
-    width: calc(100% - 64px);
-    margin: 5rem auto;
-  }
-}
-.page404__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin-bottom: 1rem;
-}
-@media (min-width: 1000px) {
-  .page404__title {
-    font-size: 2rem;
-  }
-}
-.page404__desc {
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
-}
-@media (min-width: 1000px) {
-  .page404__desc {
-    font-size: 1.3rem;
-  }
-}
-
 .donate__follow {
   width: calc(100% - 64px);
   margin: 3rem auto;

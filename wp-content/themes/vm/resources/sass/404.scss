@@ -1,0 +1,27 @@
+.page404{
+  width: $small-width;
+  margin: $triple auto;
+  text-align: center;
+  @media (min-width: $breakpoint-medium) {
+    width: $large-width;
+    margin: $quintuple auto;
+  }
+
+  &__title {
+    font-size: $mobileTitle;
+    line-height: 2rem;
+    margin-bottom: $basic;
+    @media (min-width: $breakpoint-medium) {
+      font-size: $title;
+    }
+  }
+
+  &__desc{
+    font-size: $content;
+    margin-bottom: $triple;
+
+    @media (min-width: $breakpoint-medium) {
+      font-size: $core;
+    }
+  }
+}
