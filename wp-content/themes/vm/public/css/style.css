@@ -1390,6 +1390,13 @@ input:checked ~ .header__brand__nav {
     justify-content: space-between;
   }
 }
+@media (min-width: 1000px) {
+  .contact__container__info {
+    position: sticky;
+    top: 3rem;
+    align-self: flex-start;
+  }
+}
 .contact__container__info__text {
   font-size: 1.1rem;
 }

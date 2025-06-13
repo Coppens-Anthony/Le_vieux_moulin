@@ -23,6 +23,11 @@
     }
 
     &__info {
+      @media (min-width: $breakpoint-medium) {
+        position: sticky;
+        top: 3rem;
+        align-self: flex-start;
+      }
       &__text {
         font-size: $content;
         @media (min-width: $breakpoint-medium) {

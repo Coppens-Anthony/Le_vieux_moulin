@@ -214,9 +214,9 @@ function dw_handle_contact_form()
 
 function dashboard() {
     wp_add_dashboard_widget(
-        'instructions_client', // ID unique
-        'Bienvenue ! Consignes à suivre', // Titre du widget
-        'update_content_instruction' // Fonction de contenu
+        'instructions_client',
+        'Bienvenue ! Consignes à suivre',
+        'update_content_instruction'
     );
 }
 
@@ -234,9 +234,9 @@ function update_content_instruction() {
 
 function upload() {
     wp_add_dashboard_widget(
-        'upload_instructions', // <-- ID différent ici !
-        'Consignes pour la mise à jour en ligne', // Titre du widget
-        'upload_instruction' // Fonction de contenu
+        'upload_instructions',
+        'Consignes pour la mise à jour en ligne',
+        'upload_instruction'
     );
 }
 
